@@ -3,7 +3,9 @@ import numpy as np
 def information_content(p):
     # h(x) = log2(1/p)
     # handle zeros: 0 * log(0) = 0 by convention
-    return np.where(p > 0, np.log2(1/p), 0)
+    with np.errstate(divide='ignore'):
+        return np.where(p > 0, np.log2(1/p), 0)
+
 
 def shannon_entropy(probs):
     # H(X) = sum of p(x) * log2(1/p(x)) for all outcomes
