@@ -41,21 +41,40 @@ def plot_error_hist(e, delta, b, bins=100):
     plt.axvline(+delta / 2, color="red", linestyle="--")
 
 
+def sqnr(x, x_hat):
+    """Signal power / quantization noise power, in dB."""
+    signal_power = np.var(x)
+    noise_power = np.var(x - x_hat)
+    return 10 * np.log10(signal_power / noise_power)
+
 if __name__ == "__main__":
-    np.random.seed(0)                     # reproducibility
+    np.random.seed(0)
 
     X_MIN, X_MAX = -1, 1
 
-    # Gaussian source, clipped into range (granular regime)
     x = np.random.normal(0, 0.3, 100_000)
     x = np.clip(x, X_MIN, X_MAX)
 
-    # b=6: high resolution -> error uniform, var ~ delta^2/12
     e6, d6 = analyze(x, X_MIN, X_MAX, b=6)
     plot_error_hist(e6, d6, b=6)
 
-    # b=1: assumption breaks -> error U-shaped, var > delta^2/12
     e1, d1 = analyze(x, X_MIN, X_MAX, b=1)
     plot_error_hist(e1, d1, b=1)
 
-    plt.show()
+    bits = np.arange(1, 9)
+    sqnr_values = []
+
+    for b in bits:
+        x_hat, _ = uniform_quantize(x, X_MIN, X_MAX, b)
+        sqnr_values.append(sqnr(x, x_hat))
+
+    plt.figure()
+    plt.plot(bits, sqnr_values, marker='o', label='Measured SQNR')
+    plt.plot(bits, 6.02 * bits + 1.76, linestyle='--', label='Theoretical ~6dB/bit')
+    plt.xlabel('Bitrate (bits/sample)')
+    plt.ylabel('SQNR (dB)')
+    plt.title('Rate-Distortion Curve — Uniform Scalar Quantizer')
+    plt.legend()
+    plt.grid()
+
+    plt.show()  # single call at the end — shows all figures together
