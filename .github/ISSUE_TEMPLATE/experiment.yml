@@ -1,0 +1,79 @@
+name: Experiment
+description: A thesis experiment card for codec-lab
+title: "EXP-NN: "
+labels: ["experiment"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One experiment = one card. Fill every required field before the work starts.
+        See the experiment suite and stage definitions in the project notes.
+  - type: input
+    id: goal
+    attributes:
+      label: Goal
+      description: One sentence — why this experiment exists.
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis / expected result
+      description: What theory or the supervisor's hypothesis predicts, and what would confirm or refute it.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup
+      value: |
+        - **Codec:**
+        - **Quantizer:** SQ (Lloyd-Max) vs VQ (LBG)
+        - **Source:**
+        - **Bitrate:**
+        - **Swept variable:**
+        - **Inherited params:**
+    validations:
+      required: true
+  - type: input
+    id: metric
+    attributes:
+      label: Metric
+      description: Primary reported quantity, e.g. "VQ gain over SQ in dB".
+    validations:
+      required: true
+  - type: input
+    id: output
+    attributes:
+      label: Output artifact
+      description: Plot / table + where it lands in the repo.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      description: Which phase of the argument this experiment belongs to.
+      options:
+        - Reference
+        - Investigation
+        - Diagnosis
+        - Constraint
+        - Ablation
+        - Scope
+    validations:
+      required: true
+  - type: input
+    id: deps
+    attributes:
+      label: Dependencies
+      description: "Blocked by: #NN  ·  Blocks: #NN"
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of done
+      value: |
+        - [ ] Script implemented
+        - [ ] Result artifact generated and committed
+        - [ ] One-paragraph interpretation written
+        - [ ] Params needed downstream recorded on this issue
