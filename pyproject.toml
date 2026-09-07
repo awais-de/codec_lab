@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "codeclab"
+version = "0.1.0"
+description = "Shared code for the codec-lab quantization experiment suite (EXP-01..EXP-14)"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5,<3",
+    "scipy>=1.18,<2",
+    "matplotlib>=3.11,<4",
+    "colorednoise>=2.2,<3",
+    "pyyaml>=6.0,<7",
+    "scikit-learn>=1.5,<2",
+]
+
+[project.optional-dependencies]
+# added when the suite reaches the neural experiments (EXP-05+)
+neural = ["torch>=2.3"]
+# added at Cluster 4 real-speech validation (EXP-13+)
+speech = ["pesq>=0.0.4", "pystoi>=0.4.1", "torchmetrics>=1.4"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/codeclab"]

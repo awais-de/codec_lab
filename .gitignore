@@ -1,4 +1,15 @@
 .venv
+.DS_Store
 LEARNING_PLAN.md
 sources/
 archive/
+
+# editable-install / build artifacts
+*.egg-info/
+__pycache__/
+
+# result run directories: keep the numbers (csv/json/yaml), not the binaries
+results/**/*.png
+results/**/*.pdf
+results/**/*.npy
+results/**/*.npz
