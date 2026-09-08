@@ -1,0 +1,13 @@
+experiment: exp_01_memoryless_floor
+issue: TBD
+source:
+  kind: iid_2d
+  n_samples: 20000
+  seed: 0
+sweep:
+  rate:
+  - 2
+  - 3
+  - 4
+quant:
+  lbg_eps: 0.01

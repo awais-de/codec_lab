@@ -1,0 +1,14 @@
+experiment: exp_01_memoryless_floor
+issue: 11           # rung 1; old #1 (rho sweep) is now EXP-02
+
+source:
+  kind: iid_2d      # gaussian_2d(rho=0) and uniform_2d, both zero-mean unit-variance
+  n_samples: 20000
+  seed: 0
+
+sweep:
+  rate: [2, 3, 4]   # bits/dim; VQ codebook is rate-matched: K = 2**(2*R) = 16, 64, 256
+                    # extend with 5 (K=1024) for a tighter space-filling estimate — slower
+
+quant:
+  lbg_eps: 0.01

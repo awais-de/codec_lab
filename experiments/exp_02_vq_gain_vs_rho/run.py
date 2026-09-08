@@ -1,7 +1,8 @@
-"""EXP-01 — VQ gain vs source correlation (ρ sweep).  Tracks issue #1.
+"""EXP-02 — VQ gain vs source correlation (ρ sweep).  Tracks issue #1 (rung 2).
 
-Skeleton: the plumbing (config, run directory, saving) is wired up. The sweep
-itself is left to fill in — that's the experiment.
+Rung 2 of the classical SQ-vs-VQ ladder. EXP-01 measured the memoryless granular
+floor; here correlation is turned on and the memory gain should appear on top of
+that floor as −5·log₁₀(1−ρ²) dB at D=2.
 """
 from pathlib import Path
 

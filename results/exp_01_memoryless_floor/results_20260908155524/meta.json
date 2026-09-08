@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_01_memoryless_floor",
+  "finished": "2026-09-08T15:56:41",
+  "duration_s": 76.787,
+  "git_sha": "3ffa94d8ca7b8d3b730e70e51eba7247b4ff93ba",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wl-r1-166.rz.tu-ilmenau.de",
+  "python": "3.12.2",
+  "n_points": 6
+}

@@ -16,6 +16,7 @@ import numpy as np
 
 __all__ = [
     "gaussian_2d",
+    "uniform_2d",
     "correlated_gaussian",
     "colored_noise",
     "laplacian",
@@ -32,6 +33,19 @@ def gaussian_2d(rho: float, n: int, *, seed: int = 0) -> np.ndarray:
     cov = np.array([[1.0, rho], [rho, 1.0]])
     rng = np.random.default_rng(seed)
     return rng.multivariate_normal(np.zeros(2), cov, size=n)
+
+
+def uniform_2d(n: int, *, seed: int = 0) -> np.ndarray:
+    """2D i.i.d. uniform, zero-mean unit-variance — each axis ``U(-sqrt3, sqrt3)``.
+
+    A memoryless source with *no shape gain*: a flat pdf makes the optimal scalar
+    point density uniform, so a vector quantizer's only remaining edge over a
+    scalar one is the space-filling (granular cell) gain. EXP-01 uses this to
+    isolate that term from the Gaussian's shape gain.
+    """
+    a = np.sqrt(3.0)
+    rng = np.random.default_rng(seed)
+    return rng.uniform(-a, a, size=(n, 2))
 
 
 def correlated_gaussian(
