@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_02_vq_gain_vs_rho",
+  "finished": "2026-09-08T17:38:40",
+  "duration_s": 22.166,
+  "git_sha": "3e4539e61bf4f2c67af6feceebfca47b89677428",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wl-r1-166.rz.tu-ilmenau.de",
+  "python": "3.12.2",
+  "n_points": 12
+}

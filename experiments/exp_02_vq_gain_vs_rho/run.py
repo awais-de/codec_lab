@@ -61,7 +61,7 @@ def main() -> None:
     ax = gain_vs_x(
         arr[:, 0], arr[:, 3],
         xlabel=r"source correlation $\rho$",
-        title="EXP-01: VQ gain over optimal SQ vs source correlation",
+        title="EXP-02: VQ gain over optimal SQ vs source correlation",
     )
     ax.figure.savefig(ctx.path("vq_gain_vs_rho.png"), bbox_inches="tight")
 
