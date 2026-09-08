@@ -9,7 +9,7 @@ archive/
 __pycache__/
 
 # result run directories: keep the numbers (csv/json/yaml), not the binaries
-results/**/*.png
+#results/**/*.png
 results/**/*.pdf
 results/**/*.npy
 results/**/*.npz

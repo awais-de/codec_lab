@@ -33,10 +33,22 @@ def main() -> None:
     for rho in cfg["sweep"]["rho"]:
         X = sources.gaussian_2d(rho, n, seed=seed)
 
-        # TODO: SQ baseline — quantize_per_axis(X, b) -> X_hat_sq
-        # TODO: VQ           — lbg(X, K, eps=eps).quantize(X) -> X_hat_vq
-        # TODO: sqnr_db(X, X_hat_*) for each, then vq_gain_db(...)
-        raise NotImplementedError("fill in the sweep body")
+        # SQ baseline: independent optimal Lloyd-Max on each axis, b bits/axis.
+        X_hat_sq = quantize_per_axis(X, b)
+
+        # VQ: one LBG codebook of size K = 2**(b*D), rate-matched to the SQ above.
+        X_hat_vq = lbg(X, K, eps=eps).quantize(X)
+
+        sqnr_sq = sqnr_db(X, X_hat_sq)
+        sqnr_vq = sqnr_db(X, X_hat_vq)
+        gain = vq_gain_db(sqnr_vq, sqnr_sq)
+
+        rows.append((rho, sqnr_sq, sqnr_vq, gain))
+        print(
+            f"rho={rho:4.2f}  "
+            f"SQNR_SQ={sqnr_sq:6.3f} dB  SQNR_VQ={sqnr_vq:6.3f} dB  "
+            f"gain={gain:+.3f} dB"
+        )
 
     # --- save ---
     arr = np.array(rows)
@@ -53,7 +65,7 @@ def main() -> None:
     ax.figure.savefig(ctx.path("vq_gain_vs_rho.png"), bbox_inches="tight")
 
     run_dir = ctx.finish(n_points=len(rows))
-    print(f"wrote {run_dir}")
+    print(f"Results saved to {run_dir}")
 
 
 if __name__ == "__main__":
