@@ -1,5 +1,5 @@
 name: Experiment
-description: A thesis experiment card for codec-lab
+description: An experiment card for the codec-lab quantization suite
 title: "EXP-NN: "
 labels: ["experiment"]
 body:
@@ -19,7 +19,7 @@ body:
     id: hypothesis
     attributes:
       label: Hypothesis / expected result
-      description: What theory or the supervisor's hypothesis predicts, and what would confirm or refute it.
+      description: What classical theory or the working hypothesis predicts, and what would confirm or refute it.
     validations:
       required: true
   - type: textarea

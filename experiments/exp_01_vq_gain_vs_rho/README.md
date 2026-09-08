@@ -9,7 +9,7 @@ correlated the source is?
 ## Hypothesis
 Classical prediction: VQ gain grows with ρ, because VQ exploits inter-dimension
 correlation that SQ ignores. A monotonically rising VQ-gain-vs-ρ curve confirms
-the mechanism the whole thesis rests on; a flat curve refutes it.
+the mechanism the capacity hypothesis rests on; a flat curve refutes it.
 
 ## Setup
 - Source: 2D Gaussian, unit variances, correlation ρ swept over `config.yaml`
