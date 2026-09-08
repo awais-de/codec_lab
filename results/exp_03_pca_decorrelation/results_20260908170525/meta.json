@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_03_pca_decorrelation",
+  "finished": "2026-09-08T17:06:10",
+  "duration_s": 44.078,
+  "git_sha": "03bf65df8bd2b213e9892776e36f50b1aa1a55e9",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wl-r1-166.rz.tu-ilmenau.de",
+  "python": "3.12.2",
+  "n_points": 12
+}
