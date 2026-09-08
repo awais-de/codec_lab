@@ -6,7 +6,9 @@ would otherwise be re-derived (and occasionally mis-derived) in every script.
 """
 from __future__ import annotations
 
-__all__ = ["rate_matched_codebook_size", "vq_gain_db"]
+import numpy as np
+
+__all__ = ["rate_matched_codebook_size", "vq_gain_db", "water_filling_bits"]
 
 
 def rate_matched_codebook_size(bits_per_dim: float, D: int) -> int:
@@ -31,3 +33,19 @@ def vq_gain_db(quality_vq_db: float, quality_sq_db: float) -> float:
     Positive means VQ reconstructs the source better at the same rate.
     """
     return float(quality_vq_db - quality_sq_db)
+
+
+def water_filling_bits(variances, total_bits: int):
+    """Integer bit allocation across axes by greedy marginal gain.
+
+    Hands each of ``total_bits`` bits to the axis whose quantization error is
+    currently largest (proxy ``variance * 2**(-2b)``, i.e. Gaussian high-rate
+    distortion). Reduces to an equal split when the variances match; loads the
+    high-variance axes when they differ — the classical transform-coding
+    allocation. Returns an int array summing to ``total_bits``.
+    """
+    v = np.asarray(variances, dtype=float)
+    b = np.zeros(len(v), dtype=int)
+    for _ in range(int(round(total_bits))):
+        b[int(np.argmax(v * 4.0 ** (-b)))] += 1
+    return b

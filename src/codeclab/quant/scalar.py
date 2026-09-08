@@ -84,15 +84,25 @@ def lloyd_max(
     return ScalarQuantizer(levels=levels, boundaries=boundaries)
 
 
-def quantize_per_axis(X: np.ndarray, bits: int, **kw) -> np.ndarray:
+def quantize_per_axis(X: np.ndarray, bits, **kw) -> np.ndarray:
     """Fit an independent Lloyd-Max quantizer to each column of ``X`` (n, D).
 
-    This is the fair scalar baseline the suite compares VQ against: ``bits`` per
-    dimension, no cross-dimension structure exploited. Returns ``X_hat``.
+    This is the fair scalar baseline the suite compares VQ against: no
+    cross-dimension structure exploited. Returns ``X_hat``.
+
+    ``bits`` is either an int (same rate on every axis) or a per-axis sequence
+    (transform coding with bit allocation — see :func:`codeclab.rd.water_filling_bits`).
+    A zero-bit axis is not coded: it is reconstructed at its mean.
     """
     X = np.asarray(X, dtype=float)
+    D = X.shape[1]
+    bits_per_axis = np.broadcast_to(bits, (D,)).astype(int)
     X_hat = np.empty_like(X)
-    for j in range(X.shape[1]):
-        q = lloyd_max(X[:, j], bits, **kw)
-        X_hat[:, j] = q.quantize(X[:, j])
+    for j in range(D):
+        b = int(bits_per_axis[j])
+        if b <= 0:
+            X_hat[:, j] = X[:, j].mean()
+        else:
+            q = lloyd_max(X[:, j], b, **kw)
+            X_hat[:, j] = q.quantize(X[:, j])
     return X_hat
