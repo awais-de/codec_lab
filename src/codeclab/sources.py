@@ -65,7 +65,7 @@ def correlated_gaussian(
         ``"equi"`` -> equicorrelation ``Sigma[i, j] = rho`` for ``i != j``, 1 on
                       the diagonal (every pair equally correlated).
 
-    Used by EXP-02, EXP-03..EXP-08 (with D=2 those reduce to the 2D case).
+    Used by the dimensionality sweep (EXP-09), classical and neural.
     """
     if not -1.0 < rho < 1.0:
         raise ValueError(f"rho must be in (-1, 1), got {rho}")
