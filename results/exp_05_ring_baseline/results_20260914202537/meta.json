@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_05_ring_baseline",
+  "finished": "2026-09-14T20:25:40",
+  "duration_s": 3.157,
+  "git_sha": "541379a16ebbcbe5b6fcd9cd71f3d5c907227ea9",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wlan-b0385.fem.tu-ilmenau.de",
+  "python": "3.12.2",
+  "K": 16
+}

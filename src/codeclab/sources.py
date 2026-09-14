@@ -20,6 +20,7 @@ __all__ = [
     "correlated_gaussian",
     "colored_noise",
     "laplacian",
+    "ring_2d",
 ]
 
 
@@ -110,3 +111,15 @@ def laplacian(scale: float, D: int, n: int, *, seed: int = 0) -> np.ndarray:
     """
     rng = np.random.default_rng(seed)
     return rng.laplace(loc=0.0, scale=scale, size=(n, D))
+
+
+def ring_2d(n: int, *, radius: float = 1.0, radial_noise: float = 0.1, seed: int = 0) -> np.ndarray:
+    """2D points scattered near a circle of the given radius.
+
+    Zero mean, isotropic covariance (~ ``0.5*(radius**2 + radial_noise**2) * I``,
+    exact as ``radial_noise -> 0``). Used by EXP-05 onward.
+    """
+    rng = np.random.default_rng(seed)
+    theta = rng.uniform(0.0, 2 * np.pi, size=n)
+    r = radius + rng.normal(0.0, radial_noise, size=n)
+    return np.stack([r * np.cos(theta), r * np.sin(theta)], axis=1)
