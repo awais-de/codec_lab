@@ -3,6 +3,7 @@
 LEARNING_PLAN.md
 sources/
 archive/
+docs/
 
 # editable-install / build artifacts
 *.egg-info/
