@@ -8,6 +8,8 @@ quant.vector LBG vector quantizer
 transforms   PCA / KLT decorrelating rotation (classical stand-in for an encoder)
 metrics.toy  MSE / SNR / SQNR
 rd           rate-distortion helpers, VQ-gain-in-dB, bit allocation
+diagnostics  latent covariance diagnostics (off-diagonal energy, participation ratio)
+models       toy autoencoder + freeze-then-swap SQ/VQ evaluation (``neural`` extra)
 plotting     shared matplotlib house style
 runctx       config loading + timestamped result directories
 

@@ -1,0 +1,19 @@
+experiment: smoke_gaussian_neural
+issue: null         # NOT a numbered experiment -- see docs/design/neural-capacity-plan.md, Phase A
+
+source:
+  kind: gaussian_2d
+  rho: 0.85
+  n_samples: 20000
+  seed: 0
+
+quant:
+  bits_per_dim: 2
+
+train:
+  rate_noise: 1.0   # width of the additive-uniform rate proxy (Phase 0 of the design doc)
+  epochs: 2000
+  lr: 0.01
+
+sweep:
+  capacity: [null, 4, 64]   # null = literal linear encoder/decoder (no hidden layer)

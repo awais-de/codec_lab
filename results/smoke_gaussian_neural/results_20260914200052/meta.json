@@ -1,0 +1,11 @@
+{
+  "experiment": "smoke_gaussian_neural",
+  "finished": "2026-09-14T20:01:39",
+  "duration_s": 47.18,
+  "git_sha": "9d92ce05835fa9ddcd5ee4ea297845aca9ebabc2",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wlan-b0385.fem.tu-ilmenau.de",
+  "python": "3.12.2",
+  "n_points": 3
+}
