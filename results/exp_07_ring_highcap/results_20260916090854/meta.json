@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_07_ring_highcap",
+  "finished": "2026-09-16T09:09:24",
+  "duration_s": 30.135,
+  "git_sha": "853db14891a34ca71814ddb3df6991109aa58cb9",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wlan-b0385.fem.tu-ilmenau.de",
+  "python": "3.12.2",
+  "capacity": 64
+}

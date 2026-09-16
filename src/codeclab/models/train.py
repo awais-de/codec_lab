@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import numpy as np
 import torch
+from torch import nn
 
 from .autoencoder import AutoEncoder
 
@@ -11,8 +12,9 @@ __all__ = ["train_autoencoder"]
 
 def train_autoencoder(
     X: np.ndarray,
-    capacity: int | None = None,
+    capacity: int | list[int] | None = None,
     *,
+    activation=nn.Tanh,
     rate_noise: float = 1.0,
     epochs: int = 2000,
     lr: float = 1e-2,
@@ -20,7 +22,7 @@ def train_autoencoder(
 ) -> AutoEncoder:
     torch.manual_seed(seed)
     dim = X.shape[1]
-    ae = AutoEncoder(dim=dim, capacity=capacity)
+    ae = AutoEncoder(dim=dim, capacity=capacity, activation=activation)
     Xt = torch.from_numpy(np.asarray(X, dtype=np.float32))
     ae.set_target_var(Xt)
 

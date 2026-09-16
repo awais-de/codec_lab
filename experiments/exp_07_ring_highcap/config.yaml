@@ -1,0 +1,20 @@
+experiment: exp_07_ring_highcap
+issue: 6
+
+source:
+  kind: ring_2d
+  radius: 1.0
+  radial_noise: 0.1
+  n_samples: 20000
+  seed: 0
+
+quant:
+  bits_per_dim: 2
+
+model:
+  capacity: 64
+
+train:
+  rate_noise: 1.0
+  epochs: 2000
+  lr: 0.01
