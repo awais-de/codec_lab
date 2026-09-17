@@ -89,6 +89,7 @@ def main() -> None:
         ax.set_title(title)
         ax.set_aspect("equal")
         ax.legend(markerscale=3)
+    fig.suptitle("Ring source, neural encoder h=64")
     fig.savefig(ctx.path("ring_highcap_sq_vs_vq.png"), bbox_inches="tight")
 
     run_dir = ctx.finish(capacity=capacity)

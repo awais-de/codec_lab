@@ -54,6 +54,7 @@ def main() -> None:
         ax.set_title(title)
         ax.set_aspect("equal")
         ax.legend(markerscale=3)
+    fig.suptitle("Ring source, no transform")
     fig.savefig(ctx.path("ring_sq_vs_vq.png"), bbox_inches="tight")
 
     run_dir = ctx.finish(K=K)
