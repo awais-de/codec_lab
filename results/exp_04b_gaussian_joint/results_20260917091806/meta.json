@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_04b_gaussian_joint",
+  "finished": "2026-09-17T09:19:21",
+  "duration_s": 75.425,
+  "git_sha": "ff73d9e37cbf1995ce0176cebd1bbaed7db5128f",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wlan-b0385.fem.tu-ilmenau.de",
+  "python": "3.12.2",
+  "capacity": 4
+}

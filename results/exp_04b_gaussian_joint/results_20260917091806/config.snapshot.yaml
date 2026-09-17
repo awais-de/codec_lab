@@ -1,0 +1,15 @@
+experiment: exp_04b_gaussian_joint
+issue: 14
+source:
+  kind: gaussian_2d
+  rho: 0.85
+  n_samples: 20000
+  seed: 0
+quant:
+  bits_per_dim: 2
+model:
+  capacity: 4
+train:
+  outer_rounds: 20
+  inner_epochs: 100
+  lr: 0.01

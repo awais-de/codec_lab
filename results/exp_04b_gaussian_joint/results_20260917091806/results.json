@@ -1,0 +1,59 @@
+{
+  "gain_latent_db": 2.9768755411164616,
+  "gain_signal_db": 4.5037829566653995,
+  "sq_encoder": {
+    "quantizer": "sq",
+    "sqnr_latent_db": 7.650635439738247,
+    "sqnr_signal_db": 6.719374422232206,
+    "bits_allocation": [
+      2,
+      2
+    ],
+    "K": 16,
+    "T": 1,
+    "latent_cov": [
+      [
+        0.9676178217893606,
+        -0.8189508195689706
+      ],
+      [
+        -0.8189508195689706,
+        1.0439452668431988
+      ]
+    ],
+    "off_diag_energy": 0.6706804448726887,
+    "eigenvalues": [
+      0.18594197794380923,
+      1.82562111068875
+    ],
+    "participation_ratio": 1.201611249354878
+  },
+  "vq_encoder": {
+    "quantizer": "vq",
+    "sqnr_latent_db": 10.627510980854709,
+    "sqnr_signal_db": 11.223157378897605,
+    "bits_allocation": null,
+    "K": 16,
+    "T": 1,
+    "latent_cov": [
+      [
+        0.9293711332298011,
+        -0.5200758533890275
+      ],
+      [
+        -0.5200758533890275,
+        1.0821916444673028
+      ]
+    ],
+    "off_diag_energy": 0.27047889327832525,
+    "eigenvalues": [
+      0.4801223544526347,
+      1.5314404232444692
+    ],
+    "participation_ratio": 1.5709069061866914
+  },
+  "reference_fair": {
+    "gain_latent_db": 0.706,
+    "gain_signal_db": -0.494
+  }
+}

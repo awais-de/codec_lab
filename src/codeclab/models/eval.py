@@ -11,7 +11,7 @@ from ..quant.vector import lbg
 from ..rd import rate_matched_codebook_size, vq_gain_db, water_filling_bits
 from .autoencoder import AutoEncoder
 
-__all__ = ["evaluate_sq_vs_vq"]
+__all__ = ["evaluate_sq_vs_vq", "evaluate_own_quantizer"]
 
 
 def evaluate_sq_vs_vq(ae: AutoEncoder, X: np.ndarray, bits_per_dim: int, *, lbg_eps: float = 0.01) -> dict:
@@ -50,6 +50,49 @@ def evaluate_sq_vs_vq(ae: AutoEncoder, X: np.ndarray, bits_per_dim: int, *, lbg_
         "sqnr_vq_signal_db": sqnr_vq_signal,
         "gain_signal_db": vq_gain_db(sqnr_vq_signal, sqnr_sq_signal),
         "bits_allocation": bits.tolist(),
+        "K": K,
+        "T": 1,
+        "latent_cov": diag["cov"].tolist(),
+        "off_diag_energy": diag["off_diag_energy"],
+        "eigenvalues": diag["eigenvalues"].tolist(),
+        "participation_ratio": diag["participation_ratio"],
+    }
+
+
+def evaluate_own_quantizer(
+    ae: AutoEncoder, X: np.ndarray, quantizer: str, bits_per_dim: int, *, lbg_eps: float = 0.01
+) -> dict:
+    """Evaluate an encoder against the single quantizer it was trained with."""
+    if quantizer not in ("sq", "vq"):
+        raise ValueError(f"quantizer must be 'sq' or 'vq', got {quantizer!r}")
+    X = np.asarray(X, dtype=np.float32)
+    D = X.shape[1]
+    ae.eval()
+    with torch.no_grad():
+        Z = ae.encode(torch.from_numpy(X)).numpy()
+
+    diag = latent_diagnostics(Z)
+    total_bits = bits_per_dim * D
+    K = rate_matched_codebook_size(bits_per_dim, D)
+
+    if quantizer == "sq":
+        bits = water_filling_bits(np.diag(diag["cov"]), total_bits)
+        Z_hat = quantize_per_axis(Z, bits)
+    else:
+        bits = None
+        Z_hat = lbg(Z, K, eps=lbg_eps).quantize(Z)
+
+    with torch.no_grad():
+        X_hat = ae.decoder(torch.from_numpy(Z_hat.astype(np.float32))).numpy()
+
+    sqnr_latent = sqnr_db(Z, Z_hat)
+    sqnr_signal = sqnr_db(X, X_hat)
+
+    return {
+        "quantizer": quantizer,
+        "sqnr_latent_db": sqnr_latent,
+        "sqnr_signal_db": sqnr_signal,
+        "bits_allocation": bits.tolist() if bits is not None else None,
         "K": K,
         "T": 1,
         "latent_cov": diag["cov"].tolist(),
