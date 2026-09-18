@@ -33,11 +33,19 @@ Output → `results/audit_ring/a3_fold_warmstart/results_<timestamp>/`: `results
 `trajectories.csv`, `gain_vs_epoch.png`, `latent_before_after.png`.
 
 ## Definition of done
-- [ ] Warm start reaches gain ≤ 1.0 dB at h=64 (h=4 attempt recorded either way)
-- [ ] Trajectories logged at `rate_noise` 1.0, 3 seeds
-- [ ] Noise-width arm logged
-- [ ] Verdict against the pre-registered predictions, one paragraph
-- [ ] Wording for the EXP-07 (#6) correction drafted from the verdict
+- [x] Warm start reaches gain ≤ 1.0 dB at h=64 (h=4 cannot represent the fold: +2.1–2.4 dB)
+- [x] Trajectories logged at `rate_noise` 1.0, 3 seeds (2 for h=64)
+- [x] Noise-width arm logged
+- [x] Verdict against the pre-registered predictions
+- [x] Wording for the EXP-07 (#6) correction drafted from the verdict
 
 ## Result
-_(fill in after the run)_
+Run `results_20260918221754`. Neither pre-registered branch fits exactly. At width 1.0
+the objective drives a fold-started network all the way to EXP-07's flat ellipse (gain
+4.5–4.9 dB, PR 1.6–1.7) — the objective is the culprit at the main ladder's setting. At
+widths ≤ 0.5 the fold is only partly inflated into a dented loop and settles at
+0.65–2.6 dB, well below the classical 3.29 — the objective tolerates a partially folded
+encoder that random-init training never finds. One mechanism at all widths: the
+additive-noise proxy rewards strand separation, a fold needs strand proximity, pressure
+scales with noise width. The first-100-epoch jump in every arm is a fresh-optimizer
+transient (cross-checked at lr 0.001, same endpoints). Full write-up on #18.
