@@ -1,0 +1,35 @@
+experiment: audit_ring/a3_fold_warmstart
+issue: 18
+source:
+  kind: ring_2d
+  radius: 1.0
+  radial_noise: 0.1
+  n_samples: 20000
+  seed: 0
+quant:
+  bits_per_dim: 2
+fold:
+  perp_scale: 1.0
+networks:
+  highcap: 64
+  deep:
+  - 64
+  - 64
+  lowcap: 4
+warmstart:
+  epochs: 3000
+  lr: 0.01
+warmstart_max_gain_db: 1.0
+continue:
+  epochs: 2000
+  lr: 0.01
+  log_every: 100
+rate_noises:
+- 0.1
+- 0.2
+- 0.5
+- 1.0
+seeds:
+- 0
+- 1
+- 2
