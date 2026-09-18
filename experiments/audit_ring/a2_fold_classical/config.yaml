@@ -1,0 +1,18 @@
+experiment: audit_ring/a2_fold_classical
+issue: 17
+
+source:
+  kind: ring_2d
+  radius: 1.0
+  radial_noise: 0.1
+  n_samples: 20000
+  seed: 0
+
+quant:
+  bits_per_dim: 2
+  lbg_eps: 0.01
+
+fold:
+  perp_scales:
+    matched: null      # null = ring's own noise-to-spacing ratio (16 / 2*pi*radius)
+    compressed: 1.0

@@ -1,0 +1,70 @@
+{
+  "ceiling_db": 16.454152626624733,
+  "reference_exp05": {
+    "sqnr_sq_db": 13.164,
+    "sqnr_vq_db": 16.454,
+    "gain_db": 3.29
+  },
+  "rows": [
+    {
+      "encoder": "none",
+      "bits": [
+        2,
+        2
+      ],
+      "perp_scale": null,
+      "sqnr_sq_latent_db": 13.163791324137158,
+      "sqnr_vq_latent_db": 16.454004497551217,
+      "sqnr_sq_signal_db": 13.163791324137158,
+      "sqnr_vq_signal_db": 16.454004497551217,
+      "strand_crossing_frac": 0.0,
+      "gain_latent_db": 3.2902131734140596,
+      "gain_signal_db": 3.2902131734140596
+    },
+    {
+      "encoder": "seam",
+      "bits": [
+        4,
+        0
+      ],
+      "perp_scale": null,
+      "sqnr_sq_latent_db": 23.880857139803506,
+      "sqnr_vq_latent_db": 23.8816115368962,
+      "sqnr_sq_signal_db": 16.44129670347974,
+      "sqnr_vq_signal_db": 16.44291055366936,
+      "strand_crossing_frac": 0.0,
+      "gain_latent_db": 0.0007543970926953136,
+      "gain_signal_db": 0.0016138501896207913
+    },
+    {
+      "encoder": "fold (matched)",
+      "bits": [
+        2,
+        2
+      ],
+      "perp_scale": 2.5464790894703255,
+      "sqnr_sq_latent_db": 12.545416119896707,
+      "sqnr_vq_latent_db": 12.713185838225971,
+      "sqnr_sq_signal_db": 11.893392440378644,
+      "sqnr_vq_signal_db": 11.657064602002468,
+      "strand_crossing_frac": 0.0515,
+      "gain_latent_db": 0.16776971832926435,
+      "gain_signal_db": -0.23632783837617666
+    },
+    {
+      "encoder": "fold (compressed)",
+      "bits": [
+        2,
+        2
+      ],
+      "perp_scale": 1.0,
+      "sqnr_sq_latent_db": 14.487164983808249,
+      "sqnr_vq_latent_db": 14.91907432063051,
+      "sqnr_sq_signal_db": 15.711397307929811,
+      "sqnr_vq_signal_db": 15.054175417668464,
+      "strand_crossing_frac": 0.0,
+      "gain_latent_db": 0.43190933682226174,
+      "gain_signal_db": -0.6572218902613471
+    }
+  ]
+}

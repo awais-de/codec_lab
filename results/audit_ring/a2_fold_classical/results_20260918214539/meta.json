@@ -1,0 +1,12 @@
+{
+  "experiment": "audit_ring/a2_fold_classical",
+  "finished": "2026-09-18T21:45:48",
+  "duration_s": 9.109,
+  "git_sha": "b34461d49b818234b13d6ea4b027f0b89d17e396",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wlan-b0385.fem.tu-ilmenau.de",
+  "python": "3.12.2",
+  "K": 16,
+  "ceiling_db": 16.454152626624733
+}
