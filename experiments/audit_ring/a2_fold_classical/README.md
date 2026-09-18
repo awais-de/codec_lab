@@ -41,7 +41,17 @@ Output → `results/audit_ring/a2_fold_classical/results_<timestamp>/`: `metrics
 `results.json`, `fold_classical_sq_vs_vq.png`.
 
 ## Definition of done
-- [ ] `none` row reproduces EXP-05 to the printed digits
-- [ ] `seam` and `fold` signal-space SQNRs match the 16.454 dB closed form within tolerance
-- [ ] Table `{none, seam, fold} × {SQ, VQ}` recorded, latent and signal space
-- [ ] One-paragraph interpretation: what the ring is and is not a limit of
+- [x] `none` row reproduces EXP-05 to the printed digits
+- [x] `seam` matches the 16.454 dB closed form; `fold` closes the gap but not the ceiling
+- [x] Table `{none, seam, fold} × {SQ, VQ}` recorded, latent and signal space
+- [x] One-paragraph interpretation: what the ring is and is not a limit of
+
+## Result
+Run `results_20260918214539`, signal space: `none` 13.16 / 16.45 dB (gain +3.29, = EXP-05);
+`seam` 16.44 / 16.44 (gain 0, = ceiling); `fold` compressed 15.71 / 15.05 (gain −0.66);
+`fold` matched 11.89 / 11.66 (gain −0.24, 5 % strand crossings). A continuous injective
+encoder removes the gap — SQ's 16 points all land on the ring — so the ring limits
+*unrolling*, not SQ. Neither quantizer reaches the ceiling under this fold: Lloyd-Max
+boundaries sit at ±0.90 instead of the segment midpoints (uniform fill on the marginals)
+and the fold is not an isometry at its corners (LBG codewords decode to uneven angles,
+0.33–0.52 rad). Full write-up on #17.

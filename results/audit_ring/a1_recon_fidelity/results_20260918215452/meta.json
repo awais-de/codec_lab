@@ -1,0 +1,11 @@
+{
+  "experiment": "audit_ring/a1_recon_fidelity",
+  "finished": "2026-09-18T21:56:34",
+  "duration_s": 102.354,
+  "git_sha": "a86eb2f635cdd12b7d2a744bb24e24a79b169f66",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wlan-b0385.fem.tu-ilmenau.de",
+  "python": "3.12.2",
+  "n_rows": 6
+}

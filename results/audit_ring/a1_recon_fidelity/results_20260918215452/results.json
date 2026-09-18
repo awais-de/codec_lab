@@ -1,0 +1,92 @@
+{
+  "pass_bar": {
+    "recon_min_db": 25.0,
+    "pair_ratio_min": 0.1
+  },
+  "rows": [
+    {
+      "network": "lowcap",
+      "capacity": 4,
+      "seed": 0,
+      "gain_latent_db": 3.7490701686097267,
+      "reproduced": true,
+      "recon_sqnr_db": 20.023071940218866,
+      "det_min_abs": 0.5045497081774816,
+      "det_median_abs": 0.812104928840752,
+      "det_sign_flip_frac": 0.0,
+      "pair_ratio_min": 0.880607545375824,
+      "pair_ratio_p01": 0.9383255243301392,
+      "pass": false
+    },
+    {
+      "network": "lowcap",
+      "capacity": 4,
+      "seed": 1,
+      "gain_latent_db": 4.059929606872247,
+      "reproduced": null,
+      "recon_sqnr_db": 19.66793739956811,
+      "det_min_abs": 0.3577293717739999,
+      "det_median_abs": 0.6797185013013481,
+      "det_sign_flip_frac": 0.0,
+      "pair_ratio_min": 0.851506769657135,
+      "pair_ratio_p01": 0.9338889718055725,
+      "pass": false
+    },
+    {
+      "network": "lowcap",
+      "capacity": 4,
+      "seed": 2,
+      "gain_latent_db": 4.6434432468703974,
+      "reproduced": null,
+      "recon_sqnr_db": 19.016514113285574,
+      "det_min_abs": 0.20215261129638415,
+      "det_median_abs": 0.4786324251393211,
+      "det_sign_flip_frac": 0.0,
+      "pair_ratio_min": 0.7445261478424072,
+      "pair_ratio_p01": 0.8827583193778992,
+      "pass": false
+    },
+    {
+      "network": "highcap",
+      "capacity": 64,
+      "seed": 0,
+      "gain_latent_db": 4.781039087126981,
+      "reproduced": true,
+      "recon_sqnr_db": 17.83090328953631,
+      "det_min_abs": 0.08427959204033154,
+      "det_median_abs": 0.3178645336113375,
+      "det_sign_flip_frac": 0.0,
+      "pair_ratio_min": 0.6255953311920166,
+      "pair_ratio_p01": 0.7178717851638794,
+      "pass": false
+    },
+    {
+      "network": "highcap",
+      "capacity": 64,
+      "seed": 1,
+      "gain_latent_db": 4.634110447849366,
+      "reproduced": null,
+      "recon_sqnr_db": 17.21994485852422,
+      "det_min_abs": 0.09303829351536316,
+      "det_median_abs": 0.2843892055200905,
+      "det_sign_flip_frac": 0.0,
+      "pair_ratio_min": 0.6415351629257202,
+      "pair_ratio_p01": 0.6981002688407898,
+      "pass": false
+    },
+    {
+      "network": "highcap",
+      "capacity": 64,
+      "seed": 2,
+      "gain_latent_db": 4.525875655060959,
+      "reproduced": null,
+      "recon_sqnr_db": 19.290969414653777,
+      "det_min_abs": 0.21191940118933045,
+      "det_median_abs": 0.5729765838428029,
+      "det_sign_flip_frac": 0.0,
+      "pair_ratio_min": 0.7454312443733215,
+      "pair_ratio_p01": 0.8996020555496216,
+      "pass": false
+    }
+  ]
+}

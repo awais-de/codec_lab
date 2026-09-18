@@ -1,0 +1,31 @@
+experiment: audit_ring/a1_recon_fidelity
+issue: 16
+
+source:
+  kind: ring_2d
+  radius: 1.0
+  radial_noise: 0.1
+  n_samples: 20000
+  seed: 0
+
+quant:
+  bits_per_dim: 2
+
+train:              # identical to EXP-06 / EXP-07
+  rate_noise: 1.0
+  epochs: 2000
+  lr: 0.01
+
+networks:
+  lowcap: 4
+  highcap: 64
+
+seeds: [0, 1, 2]
+
+reference_gain_latent_db:   # committed seed-0 runs, must reproduce before the weights are trusted
+  lowcap: 3.7490701686097267
+  highcap: 4.781039087126981
+
+pass_bar:
+  recon_min_db: 25.0
+  pair_ratio_min: 0.1
