@@ -1,0 +1,448 @@
+{
+  "warm_start": [
+    {
+      "network": "highcap",
+      "capacity": 64,
+      "seed": 0,
+      "fit_mse_encoder": 0.001178526901639998,
+      "fit_mse_decoder": 0.001323400647379458,
+      "gain_latent_db": 0.5658493192559799,
+      "gain_signal_db": -0.025304497444727403,
+      "participation_ratio": 1.998777253378998,
+      "modes": [
+        4,
+        4
+      ],
+      "accepted": true
+    },
+    {
+      "network": "highcap",
+      "capacity": 64,
+      "seed": 1,
+      "fit_mse_encoder": 0.001597335678525269,
+      "fit_mse_decoder": 0.001523455954156816,
+      "gain_latent_db": 0.43813249408298915,
+      "gain_signal_db": 0.10841035276997424,
+      "participation_ratio": 1.998680850897289,
+      "modes": [
+        4,
+        4
+      ],
+      "accepted": true
+    },
+    {
+      "network": "highcap",
+      "capacity": 64,
+      "seed": 2,
+      "fit_mse_encoder": 0.0063647017814219,
+      "fit_mse_decoder": 0.001333025749772787,
+      "gain_latent_db": 1.4661989854000161,
+      "gain_signal_db": -0.3406091695197784,
+      "participation_ratio": 1.9992327313795548,
+      "modes": [
+        4,
+        3
+      ],
+      "accepted": false
+    },
+    {
+      "network": "deep",
+      "capacity": [
+        64,
+        64
+      ],
+      "seed": 0,
+      "fit_mse_encoder": 0.0004450837732292712,
+      "fit_mse_decoder": 0.00045905084698460996,
+      "gain_latent_db": 0.46263536312922504,
+      "gain_signal_db": -0.40461151741183876,
+      "participation_ratio": 1.998914649165859,
+      "modes": [
+        4,
+        4
+      ],
+      "accepted": true
+    },
+    {
+      "network": "deep",
+      "capacity": [
+        64,
+        64
+      ],
+      "seed": 1,
+      "fit_mse_encoder": 0.0003351740015204996,
+      "fit_mse_decoder": 0.0004827370576094836,
+      "gain_latent_db": 0.42363156055800744,
+      "gain_signal_db": -0.42776944261507666,
+      "participation_ratio": 1.9987310639301274,
+      "modes": [
+        4,
+        4
+      ],
+      "accepted": true
+    },
+    {
+      "network": "deep",
+      "capacity": [
+        64,
+        64
+      ],
+      "seed": 2,
+      "fit_mse_encoder": 0.00036327075213193893,
+      "fit_mse_decoder": 0.0004453705914784223,
+      "gain_latent_db": 0.4461646951813947,
+      "gain_signal_db": -0.4076657602135114,
+      "participation_ratio": 1.9987414674744295,
+      "modes": [
+        4,
+        4
+      ],
+      "accepted": true
+    },
+    {
+      "network": "lowcap",
+      "capacity": 4,
+      "seed": 0,
+      "fit_mse_encoder": 0.011058974079787731,
+      "fit_mse_decoder": 0.015968499705195427,
+      "gain_latent_db": 2.1732565299469453,
+      "gain_signal_db": 1.1129844569610672,
+      "participation_ratio": 1.9993379819583694,
+      "modes": [
+        3,
+        3
+      ],
+      "accepted": false
+    },
+    {
+      "network": "lowcap",
+      "capacity": 4,
+      "seed": 1,
+      "fit_mse_encoder": 0.009522302076220512,
+      "fit_mse_decoder": 0.02217038720846176,
+      "gain_latent_db": 2.44307665700798,
+      "gain_signal_db": 1.6921026899932041,
+      "participation_ratio": 1.9993810939916214,
+      "modes": [
+        3,
+        3
+      ],
+      "accepted": false
+    },
+    {
+      "network": "lowcap",
+      "capacity": 4,
+      "seed": 2,
+      "fit_mse_encoder": 0.010751590132713318,
+      "fit_mse_decoder": 0.02196354605257511,
+      "gain_latent_db": 2.137668989502842,
+      "gain_signal_db": 1.2760664828904424,
+      "participation_ratio": 1.9993047784333606,
+      "modes": [
+        3,
+        3
+      ],
+      "accepted": false
+    }
+  ],
+  "final": [
+    {
+      "network": "highcap",
+      "seed": 0,
+      "rate_noise": 0.1,
+      "gain_latent_db": 2.37724260096072,
+      "gain_signal_db": 2.6553023562031193,
+      "participation_ratio": 1.9201399356543005,
+      "modes": [
+        3,
+        2
+      ]
+    },
+    {
+      "network": "highcap",
+      "seed": 0,
+      "rate_noise": 0.2,
+      "gain_latent_db": 1.8885356140479441,
+      "gain_signal_db": 2.3355754922370195,
+      "participation_ratio": 1.9215490083775455,
+      "modes": [
+        3,
+        2
+      ]
+    },
+    {
+      "network": "highcap",
+      "seed": 0,
+      "rate_noise": 0.5,
+      "gain_latent_db": 2.3590685902791435,
+      "gain_signal_db": 1.0915455252969064,
+      "participation_ratio": 1.9247517260548381,
+      "modes": [
+        4,
+        3
+      ]
+    },
+    {
+      "network": "highcap",
+      "seed": 0,
+      "rate_noise": 1.0,
+      "gain_latent_db": 4.781838647186667,
+      "gain_signal_db": 2.7234670025383707,
+      "participation_ratio": 1.7182844268336739,
+      "modes": [
+        3,
+        2
+      ]
+    },
+    {
+      "network": "highcap",
+      "seed": 1,
+      "rate_noise": 0.1,
+      "gain_latent_db": 2.7413924571619823,
+      "gain_signal_db": 2.729383382049276,
+      "participation_ratio": 1.962389604957228,
+      "modes": [
+        2,
+        2
+      ]
+    },
+    {
+      "network": "highcap",
+      "seed": 1,
+      "rate_noise": 0.2,
+      "gain_latent_db": 1.6786960380176712,
+      "gain_signal_db": 2.3304812886615487,
+      "participation_ratio": 1.9380595901695192,
+      "modes": [
+        3,
+        2
+      ]
+    },
+    {
+      "network": "highcap",
+      "seed": 1,
+      "rate_noise": 0.5,
+      "gain_latent_db": 2.788877216948059,
+      "gain_signal_db": 1.9308846766613659,
+      "participation_ratio": 1.8950288489108782,
+      "modes": [
+        3,
+        2
+      ]
+    },
+    {
+      "network": "highcap",
+      "seed": 1,
+      "rate_noise": 1.0,
+      "gain_latent_db": 4.864940583412157,
+      "gain_signal_db": 2.8594018604891627,
+      "participation_ratio": 1.7154094459568066,
+      "modes": [
+        5,
+        2
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 0,
+      "rate_noise": 0.1,
+      "gain_latent_db": 1.3837361928136058,
+      "gain_signal_db": 1.9279510754466713,
+      "participation_ratio": 1.9832896511683844,
+      "modes": [
+        3,
+        2
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 0,
+      "rate_noise": 0.2,
+      "gain_latent_db": 1.3769525535215994,
+      "gain_signal_db": 1.9600921472976616,
+      "participation_ratio": 1.8905756824553912,
+      "modes": [
+        4,
+        2
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 0,
+      "rate_noise": 0.5,
+      "gain_latent_db": 0.9623319878099252,
+      "gain_signal_db": 0.13216757423782965,
+      "participation_ratio": 1.9987792330669647,
+      "modes": [
+        4,
+        3
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 0,
+      "rate_noise": 1.0,
+      "gain_latent_db": 4.643608091359903,
+      "gain_signal_db": 3.0193300896829687,
+      "participation_ratio": 1.5907434172033177,
+      "modes": [
+        3,
+        2
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 1,
+      "rate_noise": 0.1,
+      "gain_latent_db": 1.283060229544665,
+      "gain_signal_db": 1.9316839440021667,
+      "participation_ratio": 1.9791427621633448,
+      "modes": [
+        4,
+        2
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 1,
+      "rate_noise": 0.2,
+      "gain_latent_db": 1.056389025167615,
+      "gain_signal_db": 1.315180186443138,
+      "participation_ratio": 1.9479577816489317,
+      "modes": [
+        4,
+        3
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 1,
+      "rate_noise": 0.5,
+      "gain_latent_db": 0.6471959336990274,
+      "gain_signal_db": 0.10687186817084537,
+      "participation_ratio": 1.9934422423321687,
+      "modes": [
+        4,
+        3
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 1,
+      "rate_noise": 1.0,
+      "gain_latent_db": 2.399768350013886,
+      "gain_signal_db": 0.4965154990971552,
+      "participation_ratio": 1.9600855990171078,
+      "modes": [
+        3,
+        3
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 2,
+      "rate_noise": 0.1,
+      "gain_latent_db": 1.3072154605089814,
+      "gain_signal_db": 2.241157146639937,
+      "participation_ratio": 1.9507665958536433,
+      "modes": [
+        2,
+        2
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 2,
+      "rate_noise": 0.2,
+      "gain_latent_db": 1.204687170973985,
+      "gain_signal_db": 1.7467759071559037,
+      "participation_ratio": 1.8687859861768223,
+      "modes": [
+        5,
+        2
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 2,
+      "rate_noise": 0.5,
+      "gain_latent_db": 0.5161766497331435,
+      "gain_signal_db": 0.030895944857284974,
+      "participation_ratio": 1.9800481589818184,
+      "modes": [
+        4,
+        3
+      ]
+    },
+    {
+      "network": "deep",
+      "seed": 2,
+      "rate_noise": 1.0,
+      "gain_latent_db": 4.503468453630486,
+      "gain_signal_db": 2.9507750974359954,
+      "participation_ratio": 1.590704858829675,
+      "modes": [
+        3,
+        2
+      ]
+    }
+  ],
+  "verdict": [
+    {
+      "network": "highcap",
+      "rate_noise": 0.1,
+      "median_gain_latent_db": 2.5593175290613512,
+      "median_min_modes": 2.0,
+      "state": "unfolded"
+    },
+    {
+      "network": "highcap",
+      "rate_noise": 0.2,
+      "median_gain_latent_db": 1.7836158260328077,
+      "median_min_modes": 2.0,
+      "state": "partial"
+    },
+    {
+      "network": "highcap",
+      "rate_noise": 0.5,
+      "median_gain_latent_db": 2.573972903613601,
+      "median_min_modes": 2.5,
+      "state": "unfolded"
+    },
+    {
+      "network": "highcap",
+      "rate_noise": 1.0,
+      "median_gain_latent_db": 4.823389615299412,
+      "median_min_modes": 2.0,
+      "state": "unfolded"
+    },
+    {
+      "network": "deep",
+      "rate_noise": 0.1,
+      "median_gain_latent_db": 1.3072154605089814,
+      "median_min_modes": 2.0,
+      "state": "partial"
+    },
+    {
+      "network": "deep",
+      "rate_noise": 0.2,
+      "median_gain_latent_db": 1.204687170973985,
+      "median_min_modes": 2.0,
+      "state": "partial"
+    },
+    {
+      "network": "deep",
+      "rate_noise": 0.5,
+      "median_gain_latent_db": 0.6471959336990274,
+      "median_min_modes": 3.0,
+      "state": "fold survived"
+    },
+    {
+      "network": "deep",
+      "rate_noise": 1.0,
+      "median_gain_latent_db": 4.503468453630486,
+      "median_min_modes": 2.0,
+      "state": "unfolded"
+    }
+  ]
+}
