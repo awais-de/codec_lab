@@ -1,12 +1,12 @@
-"""Shared matplotlib house style and two recurring plot shapes."""
+"""Shared matplotlib house style and a gain-vs-sweep plot helper."""
 from __future__ import annotations
 
-from typing import Iterable, Sequence
+from typing import Sequence
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-__all__ = ["use_house_style", "gain_vs_x", "rd_curve", "SQ_COLOR", "VQ_COLOR"]
+__all__ = ["use_house_style", "gain_vs_x", "SQ_COLOR", "VQ_COLOR"]
 
 SQ_COLOR = "#c0392b"   # optimal scalar
 VQ_COLOR = "#2471a3"   # vector
@@ -53,27 +53,3 @@ def gain_vs_x(
     ax.legend()
     return ax
 
-
-def rd_curve(
-    curves: dict[str, tuple[Sequence[float], Sequence[float]]],
-    *,
-    title: str,
-    xlabel: str = "rate (bits/dim)",
-    ylabel: str = "SQNR (dB)",
-    ax: plt.Axes | None = None,
-):
-    """One line per entry in ``curves`` mapping label -> (rates, qualities)."""
-    if ax is None:
-        _, ax = plt.subplots()
-    palette = {"SQ": SQ_COLOR, "VQ": VQ_COLOR}
-    for label, (rates, quality) in curves.items():
-        ax.plot(
-            rates, quality, marker="o",
-            color=palette.get(label),
-            label=label,
-        )
-    ax.set_xlabel(xlabel)
-    ax.set_ylabel(ylabel)
-    ax.set_title(title)
-    ax.legend()
-    return ax

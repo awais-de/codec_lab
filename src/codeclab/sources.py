@@ -7,8 +7,6 @@ __all__ = [
     "gaussian_2d",
     "uniform_2d",
     "correlated_gaussian",
-    "colored_noise",
-    "laplacian",
     "ring_2d",
 ]
 
@@ -53,26 +51,6 @@ def correlated_gaussian(
 
     rng = np.random.default_rng(seed)
     return rng.multivariate_normal(np.zeros(D), cov, size=n)
-
-
-def colored_noise(slope: float, n: int, *, D: int = 1, seed: int = 0) -> np.ndarray:
-    """Power-law noise, PSD ~ ``f**(-slope)`` (0 white, 1 pink, 2 brown). Each of the
-    ``D`` columns is an independent realisation standardised to zero mean, unit variance.
-    """
-    import colorednoise as cn
-
-    rng = np.random.default_rng(seed)
-    cols = []
-    for _ in range(D):
-        x = cn.powerlaw_psd_gaussian(slope, n, random_state=rng)
-        cols.append((x - x.mean()) / x.std())
-    return np.stack(cols, axis=1)
-
-
-def laplacian(scale: float, D: int, n: int, *, seed: int = 0) -> np.ndarray:
-    """Zero-mean i.i.d. Laplacian, variance ``2 * scale**2`` -- heavier-tailed than a Gaussian."""
-    rng = np.random.default_rng(seed)
-    return rng.laplace(loc=0.0, scale=scale, size=(n, D))
 
 
 def ring_2d(n: int, *, radius: float = 1.0, radial_noise: float = 0.1, seed: int = 0) -> np.ndarray:

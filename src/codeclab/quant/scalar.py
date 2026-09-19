@@ -1,21 +1,11 @@
-"""Scalar quantizers: mid-rise uniform, and Lloyd-Max trained on samples."""
+"""Scalar quantizer: Lloyd-Max levels trained on samples."""
 from __future__ import annotations
 
 from dataclasses import dataclass
 
 import numpy as np
 
-__all__ = ["uniform_quantize", "lloyd_max", "ScalarQuantizer", "quantize_per_axis"]
-
-
-def uniform_quantize(x: np.ndarray, lo: float, hi: float, bits: int) -> np.ndarray:
-    """Mid-rise uniform quantizer on ``[lo, hi]``, ``2**bits`` levels; outside is clipped."""
-    n_levels = 2 ** bits
-    delta = (hi - lo) / n_levels
-    x_clipped = np.clip(x, lo, hi)
-    cell = np.floor((x_clipped - lo) / delta).astype(int)
-    cell = np.clip(cell, 0, n_levels - 1)
-    return lo + (cell + 0.5) * delta
+__all__ = ["lloyd_max", "ScalarQuantizer", "quantize_per_axis"]
 
 
 @dataclass
