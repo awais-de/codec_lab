@@ -1,9 +1,4 @@
-"""Shared matplotlib house style and a couple of recurring plot shapes.
-
-Import :func:`use_house_style` at the top of a ``run.py`` before plotting. The
-two helpers cover the figures the suite keeps making: "gain vs swept variable"
-(EXP-01/02/07/09/10) and "RD curve" (EXP-05/06/10).
-"""
+"""Shared matplotlib house style and two recurring plot shapes."""
 from __future__ import annotations
 
 from typing import Iterable, Sequence
@@ -45,9 +40,7 @@ def gain_vs_x(
     baseline_label: str = "classical baseline",
     ax: plt.Axes | None = None,
 ):
-    """VQ gain (dB) against a swept variable, with an optional horizontal
-    reference line for the classical baseline (EXP-07 overlays EXP-01 this way).
-    """
+    """VQ gain (dB) against a swept variable, with an optional baseline line."""
     if ax is None:
         _, ax = plt.subplots()
     ax.plot(x, gain_db, marker="o", color=VQ_COLOR, label="VQ gain over SQ")

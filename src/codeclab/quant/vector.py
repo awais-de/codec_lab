@@ -1,8 +1,4 @@
-"""Vector quantizer: LBG (generalised Lloyd) codebook design.
-
-Canonical implementation for the experiment suite. The validated original lives
-frozen in ``theory/06_vector_quantization.py``.
-"""
+"""Vector quantizer: LBG (generalised Lloyd) codebook design."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -15,11 +11,8 @@ __all__ = ["kmeans_refine", "lbg", "VectorQuantizer"]
 def kmeans_refine(
     X: np.ndarray, codewords: np.ndarray, *, n_iter: int = 100, tol: float = 1e-11
 ) -> tuple[np.ndarray, list[float]]:
-    """Lloyd iteration on a fixed-size codebook: assign -> centroid -> repeat.
-
-    Returns the refined codewords and the per-iteration distortion history
-    (per-sample MSE, i.e. summed squared error divided by dimension so it is
-    comparable to a scalar quantizer's MSE).
+    """Lloyd iteration on a fixed-size codebook. Returns the codewords and the
+    per-iteration distortion history as per-sample MSE (divided by ``D``).
     """
     X = np.asarray(X, dtype=float)
     D = X.shape[1]
@@ -44,11 +37,8 @@ def kmeans_refine(
 
 
 def lbg(X: np.ndarray, n_codewords: int, *, eps: float = 1e-2, **kw) -> "VectorQuantizer":
-    """Design a codebook of size ``n_codewords`` by additive splitting + refinement.
-
-    Grows 1 -> 2 -> 4 -> ... , splitting every codeword as ``c +/- eps`` and
-    re-running :func:`kmeans_refine` after each split. ``n_codewords`` need not be
-    a power of two (the last split is truncated).
+    """Codebook of size ``n_codewords``, grown by splitting each codeword as
+    ``c +/- eps`` and refining after each split. Need not be a power of two.
     """
     X = np.asarray(X, dtype=float)
     codewords = X.mean(axis=0, keepdims=True)

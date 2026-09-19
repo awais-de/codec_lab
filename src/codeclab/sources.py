@@ -1,15 +1,4 @@
-"""Synthetic signal generators — the "sources" the quantizers are pointed at.
-
-A *source* here is an information-theory source: a random process with known
-statistics that emits the data to be compressed. Nothing is downloaded or read
-from disk; every function returns a fresh NumPy array from a seeded RNG.
-
-Every generator returns an array of shape ``(n, D)`` (float64), zero-mean, so
-that downstream code can treat all sources uniformly.
-
-Real speech loading (LibriSpeech) lands in a separate ``speech`` module at
-Cluster 4 (EXP-13+); it does not belong here.
-"""
+"""Synthetic sources: seeded generators returning zero-mean ``(n, D)`` float64 arrays."""
 from __future__ import annotations
 
 import numpy as np
@@ -25,10 +14,7 @@ __all__ = [
 
 
 def gaussian_2d(rho: float, n: int, *, seed: int = 0) -> np.ndarray:
-    """2D zero-mean Gaussian with unit variances and correlation ``rho``.
-
-    Covariance ``[[1, rho], [rho, 1]]``. Used by EXP-01 and EXP-09.
-    """
+    """2D zero-mean Gaussian, unit variances, covariance ``[[1, rho], [rho, 1]]``."""
     if not -1.0 < rho < 1.0:
         raise ValueError(f"rho must be in (-1, 1), got {rho}")
     cov = np.array([[1.0, rho], [rho, 1.0]])
@@ -37,12 +23,8 @@ def gaussian_2d(rho: float, n: int, *, seed: int = 0) -> np.ndarray:
 
 
 def uniform_2d(n: int, *, seed: int = 0) -> np.ndarray:
-    """2D i.i.d. uniform, zero-mean unit-variance — each axis ``U(-sqrt3, sqrt3)``.
-
-    A memoryless source with *no shape gain*: a flat pdf makes the optimal scalar
-    point density uniform, so a vector quantizer's only remaining edge over a
-    scalar one is the space-filling (granular cell) gain. EXP-01 uses this to
-    isolate that term from the Gaussian's shape gain.
+    """2D i.i.d. uniform, each axis ``U(-sqrt3, sqrt3)``: zero-mean, unit-variance,
+    and zero shape gain (a flat pdf makes uniform point density optimal).
     """
     a = np.sqrt(3.0)
     rng = np.random.default_rng(seed)
@@ -52,21 +34,8 @@ def uniform_2d(n: int, *, seed: int = 0) -> np.ndarray:
 def correlated_gaussian(
     rho: float, D: int, n: int, *, seed: int = 0, kind: str = "ar1"
 ) -> np.ndarray:
-    """D-dimensional zero-mean Gaussian with a controllable correlation structure.
-
-    Parameters
-    ----------
-    rho : float
-        Correlation parameter in (-1, 1).
-    D : int
-        Dimensionality.
-    kind : {"ar1", "equi"}
-        ``"ar1"``  -> Toeplitz covariance ``Sigma[i, j] = rho ** |i - j|``
-                      (AR(1)-style: nearby dimensions correlate more).
-        ``"equi"`` -> equicorrelation ``Sigma[i, j] = rho`` for ``i != j``, 1 on
-                      the diagonal (every pair equally correlated).
-
-    Used by the dimensionality sweep (EXP-09), classical and neural.
+    """D-dim zero-mean Gaussian. ``kind="ar1"`` gives ``Sigma[i, j] = rho ** |i - j|``,
+    ``"equi"`` gives ``rho`` off-diagonal and 1 on the diagonal.
     """
     if not -1.0 < rho < 1.0:
         raise ValueError(f"rho must be in (-1, 1), got {rho}")
@@ -87,11 +56,8 @@ def correlated_gaussian(
 
 
 def colored_noise(slope: float, n: int, *, D: int = 1, seed: int = 0) -> np.ndarray:
-    """Power-law ("colored") noise with power spectral density ~ f**(-slope).
-
-    slope = 0 -> white, 1 -> pink, 2 -> brown/red. Each of the ``D`` columns is
-    an independent realisation, standardised to zero mean and unit variance.
-    Used by EXP-11. Requires the ``colorednoise`` package.
+    """Power-law noise, PSD ~ ``f**(-slope)`` (0 white, 1 pink, 2 brown). Each of the
+    ``D`` columns is an independent realisation standardised to zero mean, unit variance.
     """
     import colorednoise as cn
 
@@ -104,20 +70,14 @@ def colored_noise(slope: float, n: int, *, D: int = 1, seed: int = 0) -> np.ndar
 
 
 def laplacian(scale: float, D: int, n: int, *, seed: int = 0) -> np.ndarray:
-    """Zero-mean i.i.d. Laplacian source, shape ``(n, D)``.
-
-    Heavier tails than a Gaussian of the same variance (variance = 2 * scale**2).
-    Used by EXP-11 as a non-Gaussian contrast.
-    """
+    """Zero-mean i.i.d. Laplacian, variance ``2 * scale**2`` -- heavier-tailed than a Gaussian."""
     rng = np.random.default_rng(seed)
     return rng.laplace(loc=0.0, scale=scale, size=(n, D))
 
 
 def ring_2d(n: int, *, radius: float = 1.0, radial_noise: float = 0.1, seed: int = 0) -> np.ndarray:
-    """2D points scattered near a circle of the given radius.
-
-    Zero mean, isotropic covariance (~ ``0.5*(radius**2 + radial_noise**2) * I``,
-    exact as ``radial_noise -> 0``). Used by EXP-05 onward.
+    """2D points scattered near a circle: zero-mean, isotropic covariance
+    ``~ 0.5*(radius**2 + radial_noise**2) * I``, exact as ``radial_noise -> 0``.
     """
     rng = np.random.default_rng(seed)
     theta = rng.uniform(0.0, 2 * np.pi, size=n)

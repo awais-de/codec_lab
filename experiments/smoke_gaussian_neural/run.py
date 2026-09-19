@@ -1,9 +1,4 @@
-"""Smoke test for the neural harness -- not a numbered experiment.
-
-Checks that a linear, small, and large autoencoder trained on the rho=0.85
-Gaussian source all land near the EXP-03 floor rather than EXP-02's
-no-transform number.
-"""
+"""Neural harness validation on the Gaussian source. Tracks issue #12."""
 from pathlib import Path
 import json
 

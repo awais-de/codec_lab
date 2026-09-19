@@ -1,19 +1,4 @@
-"""EXP-01 — Memoryless SQ vs VQ: the granular floor.  Tracks issue #11 (rung 1).
-
-Rung 1 of the classical SQ-vs-VQ ladder. With an i.i.d. source there is nothing
-for VQ's *memory gain* to exploit, so it is zero by definition. Whatever edge
-LBG still holds over per-axis Lloyd-Max is the **granular floor**:
-
-    granular floor  =  space-filling gain  +  shape gain
-
-- space-filling gain: granular cell geometry only (hexagons beat squares).
-  Source-independent, -> 0.167 dB in 2D as R -> infinity.
-- shape gain: from the marginal pdf. Zero for a uniform source (a flat pdf makes
-  uniform point density optimal), positive for a Gaussian.
-
-Sweeping a Gaussian and a uniform source together splits the floor: the uniform
-gain is space-filling alone; Gaussian minus uniform is the shape gain.
-"""
+"""EXP-01 -- memoryless SQ vs VQ: the granular floor. Tracks issue #11."""
 from pathlib import Path
 
 import numpy as np
@@ -29,10 +14,8 @@ from codeclab.plotting import use_house_style, SQ_COLOR, VQ_COLOR
 
 HERE = Path(__file__).parent
 
-# hexagonal vs square granular cells: 10 log10( (1/12) / (5 / (36 sqrt 3)) )
 SPACE_FILLING_2D_DB = float(10.0 * np.log10((1 / 12) / (5 / (36 * np.sqrt(3)))))
 
-# fixed-rate optimal scalar (Lloyd-Max) SQNR for a unit Gaussian — standard table
 GAUSS_LLOYD_MAX_DB = {1: 4.40, 2: 9.30, 3: 14.62, 4: 20.22, 5: 26.01}
 
 
@@ -53,7 +36,7 @@ def main() -> None:
         "uniform": lambda: sources.uniform_2d(n, seed=seed),
     }
 
-    rows = []  # (rate, source, sqnr_sq_db, sqnr_vq_db, gain_db)
+    rows = []
     for R in rates:
         K = rate_matched_codebook_size(R, D=2)
         for name, make in make_source.items():
@@ -75,7 +58,6 @@ def main() -> None:
     def sqnr_sq(R, name):
         return next(r[2] for r in rows if r[0] == R and r[1] == name)
 
-    # --- decomposition: uniform gain = space-filling, Gaussian - uniform = shape ---
     print("\ngranular-floor decomposition (dB):")
     dec = []
     for R in rates:
@@ -86,7 +68,6 @@ def main() -> None:
             f"shape ~ {g_gau - g_uni:+.3f}   total(Gaussian) = {g_gau:+.3f}"
         )
 
-    # --- save ---
     with open(ctx.path("metrics.csv"), "w") as fh:
         fh.write("rate,source,sqnr_sq_db,sqnr_vq_db,vq_gain_db\n")
         for R, name, s_sq, s_vq, g in rows:
@@ -97,7 +78,6 @@ def main() -> None:
         for R, sf, sh, tot in dec:
             fh.write(f"{R},{sf:.6f},{sh:.6f},{tot:.6f}\n")
 
-    # --- plot 1: the granular floor ---
     fig, ax = plt.subplots()
     ax.plot(rates, [gain(R, "gaussian") for R in rates], marker="o",
             color=VQ_COLOR, label="i.i.d. Gaussian  (space-filling + shape)")
@@ -113,7 +93,6 @@ def main() -> None:
     ax.legend()
     fig.savefig(ctx.path("granular_floor.png"), bbox_inches="tight")
 
-    # --- plot 2: scalar-quantizer sanity vs closed form ---
     rr = np.array(rates, dtype=float)
     fig2, ax2 = plt.subplots()
     ax2.plot(rr, [sqnr_sq(R, "uniform") for R in rates], marker="s",

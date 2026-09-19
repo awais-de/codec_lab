@@ -1,9 +1,4 @@
-"""Scalar quantizers: mid-rise uniform, and optimal Lloyd-Max (trained on samples).
-
-Canonical implementations for the experiment suite. Written fresh here; the
-validated originals live frozen in ``theory/04_uniform_sq.py`` and
-``theory/05_lloyd_max.py``.
-"""
+"""Scalar quantizers: mid-rise uniform, and Lloyd-Max trained on samples."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -14,10 +9,7 @@ __all__ = ["uniform_quantize", "lloyd_max", "ScalarQuantizer", "quantize_per_axi
 
 
 def uniform_quantize(x: np.ndarray, lo: float, hi: float, bits: int) -> np.ndarray:
-    """Mid-rise uniform scalar quantizer on ``[lo, hi]`` with ``2**bits`` levels.
-
-    Values outside ``[lo, hi]`` are clipped. Returns the reconstruction ``x_hat``.
-    """
+    """Mid-rise uniform quantizer on ``[lo, hi]``, ``2**bits`` levels; outside is clipped."""
     n_levels = 2 ** bits
     delta = (hi - lo) / n_levels
     x_clipped = np.clip(x, lo, hi)
@@ -28,10 +20,7 @@ def uniform_quantize(x: np.ndarray, lo: float, hi: float, bits: int) -> np.ndarr
 
 @dataclass
 class ScalarQuantizer:
-    """A trained 1-D quantizer: ``levels`` with the ``boundaries`` between them.
-
-    ``boundaries`` has length ``len(levels) + 1`` with -inf / +inf at the ends.
-    """
+    """A trained 1-D quantizer; ``boundaries`` is ``len(levels) + 1`` long, -inf/+inf at the ends."""
 
     levels: np.ndarray
     boundaries: np.ndarray
@@ -52,13 +41,8 @@ class ScalarQuantizer:
 def lloyd_max(
     x: np.ndarray, bits: int, *, n_iter: int = 100, tol: float = 1e-10
 ) -> ScalarQuantizer:
-    """Train an optimal ``2**bits``-level Lloyd-Max quantizer on samples ``x``.
-
-    Alternates the two optimality conditions until the levels stop moving:
-      - boundary update: interior boundaries = midpoints of adjacent levels
-      - level update:    each level = centroid (mean) of the samples in its cell
-
-    Empty-cell guard: a cell that catches no samples keeps its previous level.
+    """Train a ``2**bits``-level Lloyd-Max quantizer on ``x``, alternating midpoint
+    boundaries and cell centroids. An empty cell keeps its previous level.
     """
     x = np.asarray(x, dtype=float).ravel()
     n_levels = 2 ** bits
@@ -85,14 +69,8 @@ def lloyd_max(
 
 
 def quantize_per_axis(X: np.ndarray, bits, **kw) -> np.ndarray:
-    """Fit an independent Lloyd-Max quantizer to each column of ``X`` (n, D).
-
-    This is the fair scalar baseline the suite compares VQ against: no
-    cross-dimension structure exploited. Returns ``X_hat``.
-
-    ``bits`` is either an int (same rate on every axis) or a per-axis sequence
-    (transform coding with bit allocation — see :func:`codeclab.rd.water_filling_bits`).
-    A zero-bit axis is not coded: it is reconstructed at its mean.
+    """Independent Lloyd-Max per column of ``X`` (n, D). ``bits`` is an int or a
+    per-axis sequence; a zero-bit axis is reconstructed at its mean.
     """
     X = np.asarray(X, dtype=float)
     D = X.shape[1]

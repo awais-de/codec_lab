@@ -1,9 +1,4 @@
-"""EXP-02 — VQ gain vs source correlation (ρ sweep).  Tracks issue #1 (rung 2).
-
-Rung 2 of the classical SQ-vs-VQ ladder. EXP-01 measured the memoryless granular
-floor; here correlation is turned on and the memory gain should appear on top of
-that floor as −5·log₁₀(1−ρ²) dB at D=2.
-"""
+"""EXP-02 -- VQ gain vs source correlation (rho sweep). Tracks issue #1."""
 from pathlib import Path
 
 import numpy as np
@@ -30,14 +25,11 @@ def main() -> None:
     eps = cfg["quant"]["lbg_eps"]
     K = rate_matched_codebook_size(b, D=2)
 
-    rows = []  # (rho, sqnr_sq_db, sqnr_vq_db, gain_db)
+    rows = []
     for rho in cfg["sweep"]["rho"]:
         X = sources.gaussian_2d(rho, n, seed=seed)
 
-        # SQ baseline: independent optimal Lloyd-Max on each axis, b bits/axis.
         X_hat_sq = quantize_per_axis(X, b)
-
-        # VQ: one LBG codebook of size K = 2**(b*D), rate-matched to the SQ above.
         X_hat_vq = lbg(X, K, eps=eps).quantize(X)
 
         sqnr_sq = sqnr_db(X, X_hat_sq)
@@ -51,7 +43,6 @@ def main() -> None:
             f"gain={gain:+.3f} dB"
         )
 
-    # --- save ---
     arr = np.array(rows)
     np.savetxt(
         ctx.path("metrics.csv"), arr,

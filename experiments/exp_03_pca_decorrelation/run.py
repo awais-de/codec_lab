@@ -1,20 +1,4 @@
-"""EXP-03 — Decorrelating transform (PCA) + SQ vs VQ.  Tracks issue #3 (rung 3).
-
-EXP-02 showed VQ's advantage over SQ is memory gain — exploiting inter-dimension
-correlation. This removes the correlation *before* quantizing, with a fixed
-linear rotation (PCA), and asks whether VQ's advantage collapses back to the
-EXP-01 granular floor.
-
-Two things have to happen for PCA to help a scalar quantizer:
-  1. rotate onto the principal axes  (decorrelate)
-  2. re-allocate bits to the now-unequal axis variances
-
-Rotation *alone* does nothing — Lloyd-Max distortion is linear in variance, so a
-rotation conserves total distortion at equal rate. The gain is entirely in the
-re-allocation. The script measures all of it:
-
-    {no transform, PCA+equal bits, PCA+allocation}  x  {SQ, VQ}
-"""
+"""EXP-03 -- decorrelating transform (PCA) + SQ vs VQ. Tracks issue #3."""
 from pathlib import Path
 
 import numpy as np
@@ -31,7 +15,6 @@ from codeclab.plotting import use_house_style, SQ_COLOR, VQ_COLOR
 
 HERE = Path(__file__).parent
 
-# EXP-01 granular floor at 2 bits/dim (0.018 space-filling + 0.376 shape)
 EXP01_FLOOR_DB = 0.394
 
 
@@ -47,15 +30,13 @@ def main() -> None:
     K = rate_matched_codebook_size(b, D=2)
     total_bits = b * 2
 
-    rows = []  # see header of metrics.csv below
+    rows = []
     for rho in cfg["sweep"]["rho"]:
         X = sources.gaussian_2d(rho, n, seed=seed)
 
-        # --- no transform (reproduces EXP-02) ---
         sq_plain = sqnr_db(X, quantize_per_axis(X, b))
         vq_plain = sqnr_db(X, lbg(X, K, eps=eps).quantize(X))
 
-        # --- PCA rotation ---
         p = pca(X)
         Y = p.forward(X)
         alloc = water_filling_bits(p.explained_variance, total_bits)
@@ -88,7 +69,6 @@ def main() -> None:
 
     rho = arr[:, 0]
 
-    # --- plot 1: VQ gain vs rho, no transform vs PCA+allocation ---
     fig, ax = plt.subplots()
     ax.plot(rho, arr[:, 6], marker="o", color=VQ_COLOR, label="no transform")
     ax.plot(rho, arr[:, 7], marker="s", color=SQ_COLOR, label="PCA + bit allocation")
@@ -101,7 +81,6 @@ def main() -> None:
     ax.legend()
     fig.savefig(ctx.path("vq_gain_pca_vs_plain.png"), bbox_inches="tight")
 
-    # --- plot 2: SQNR routes — SQ-after-PCA reaches VQ-no-transform ---
     fig2, ax2 = plt.subplots()
     ax2.plot(rho, arr[:, 2], marker="o", color=VQ_COLOR, label="VQ, no transform")
     ax2.plot(rho, arr[:, 4], marker="s", color=SQ_COLOR, label="SQ, PCA + allocation")

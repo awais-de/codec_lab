@@ -1,12 +1,5 @@
-"""Toy-stage distortion metrics for block sources of shape ``(n, D)``.
-
-Conventions
------------
-- MSE is *per-sample*: total squared error divided by ``n * D``, so a scalar
-  quantizer at ``b`` bits/dim and a vector quantizer at ``b`` bits/dim are
-  compared on the same footing.
-- SNR and SQNR are in dB. For a zero-mean source they coincide; both are kept
-  because the suite reports "SQNR" for quantization specifically.
+"""Distortion metrics for ``(n, D)`` block sources. MSE is per-sample (over ``n * D``),
+so SQ and VQ at equal bits/dim compare on the same footing.
 """
 from __future__ import annotations
 

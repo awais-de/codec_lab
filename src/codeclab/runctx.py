@@ -1,16 +1,4 @@
-"""Run context: load an experiment's ``config.yaml`` and create a timestamped
-result directory for one run.
-
-Layout produced::
-
-    results/<experiment>/results_<YYYYMMDDHHMMSS>/
-        config.snapshot.yaml   exact config used for this run
-        meta.json              git sha, seed, timestamps, host, duration
-        <the experiment's own plots / csv>
-
-The experiment's ``run.py`` calls :func:`load_config` then :func:`RunContext.start`,
-writes its artifacts into ``ctx.dir``, and calls :func:`RunContext.finish`.
-"""
+"""Config loading and timestamped run directories under ``results/<experiment>/``."""
 from __future__ import annotations
 
 import json
