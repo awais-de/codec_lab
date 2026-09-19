@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "codeclab"
 version = "0.1.0"
-description = "Shared code for the codec-lab quantization experiment suite (EXP-01..EXP-14)"
+description = "Shared code for the codec-lab quantization experiment suite"
 requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.5,<3",

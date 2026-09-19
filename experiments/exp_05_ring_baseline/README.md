@@ -25,9 +25,16 @@ Output → `results/exp_05_ring_baseline/results_<timestamp>/`: `metrics.csv`,
 
 ## Definition of done
 - [x] `codeclab.sources.ring_2d` implemented
-- [ ] Classical SQ vs VQ run
-- [ ] Result recorded, becomes the reference ceiling for EXP-06/07/08
+- [x] Classical SQ vs VQ run
+- [x] Result recorded, becomes the reference ceiling for EXP-06/07/08
 
 ## Result
-_(fill in after the run: the gain, and whether the scatter plot visibly shows VQ's
-codewords sitting on the ring vs SQ's grid missing it)_
+Run `results_20260914202537`. SQ 13.164 dB, VQ 16.454 dB, **gain +3.290 dB**.
+The printed source covariance `[[0.507, -0.002], [-0.002, 0.502]]` is isotropic
+as predicted, so none of this is memory gain. The scatter shows VQ's codewords
+sitting on the ring while SQ's grid points mostly miss it.
+
+Anchor added later by AUDIT-02 (#17): 16.454 dB is exactly the closed form for
+16 ideal points on the circle, `10·log₁₀[((1+σ²)/2) / ((σ² + (2π/16)²/12)/2)]`
+at σ=0.1 — classical VQ reaches that ceiling here with no encoder at all.
+Full write-up on issue #13.

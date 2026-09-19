@@ -21,15 +21,18 @@ neural encoder sits in front of the quantizer.
 - `experiments/exp_NN_slug/` — one folder per experiment: `config.yaml`
   (parameters), `run.py` (the sweep), `README.md` (question, hypothesis, how
   to run, result).
-- `results/exp_NN_slug/results_<timestamp>/` — one folder per run: plots,
+- `experiments/audit_ring/aN_slug/` — the ring-claim audit, a separate
+  initiative with the same layout one level deeper.
+- `results/<experiment>/results_<timestamp>/` — one folder per run: plots,
   `metrics.csv`, a config snapshot, and `meta.json` (git commit, seed,
   duration).
 
 ## Setup
 
 ```bash
-pip install -e .              # core (numpy/scipy/matplotlib toolchain)
+pip install -e .              # core (numpy / matplotlib / pyyaml)
 pip install -e ".[neural]"    # + torch, for the neural experiments
+pip install -e ".[theory]"    # + scipy, only to re-run the frozen theory/ scripts
 ```
 
 ## Experiment suite
@@ -40,12 +43,19 @@ before moving to a learned encoder.
 
 | # | question | result |
 |---|---|---|
-| EXP-01 | With no correlation, how much does VQ still beat SQ? | ~0.4 dB floor (space-filling + shape gain) |
+| EXP-01 | With no correlation, how much does VQ still beat SQ? | 0.394 dB floor at 2 bits/dim (0.018 space-filling + 0.376 shape) |
 | EXP-02 | Turn on source correlation — does VQ's gain match the classical memory-gain law? | Yes: `floor − 5·log₁₀(1−ρ²)` dB; 3.38 dB at ρ=0.85 |
-| EXP-03 | Does a fixed linear transform (PCA) recover that gain? | Yes, collapses to the floor — but only with bit allocation, not rotation alone |
-| EXP-04 | Does a trained neural encoder reproduce EXP-01/03's known answer? | Harness validated; the training proxy converges to a related-but-different optimum than classical bit allocation (documented caveat) |
-| EXP-05 | On a source with no correlation to exploit at all (a ring), does VQ still win? | +3.29 dB — confirms the mechanism here is manifold/clustering, not memory gain |
-| EXP-06+ | Does a neural encoder's capacity determine how much of that advantage survives? | in progress |
+| EXP-03 | Does a fixed linear transform (PCA) recover that gain? | Yes, collapses to 0.30 dB — but only with bit allocation, not rotation alone |
+| EXP-04 | Does a trained neural encoder reproduce EXP-01/03's known answer? | Harness validated; flat ~0.71 dB at every capacity (documented allocation caveat) |
+| EXP-05 | On a source with nothing linear to exploit (a ring), does VQ still win? | +3.29 dB — and that equals the closed-form ceiling for 16 points on the circle |
+| EXP-06 | Can a small neural encoder reshape the ring in SQ's favour? | No: +3.75 dB, the latent is still a ring |
+| EXP-07 | Can a large one? | No: +4.78 dB at h=64 — but that rise is a training-proxy artifact, see the audit |
+| EXP-04b | Does dropping the fairness conditions help SQ? | Abandoned — the training route is unreliable even on the Gaussian control |
+| AUDIT-01/02/03 | Are the ring claims properties of SQ, or of our training setup? | Of the setup: a seamless fold lets SQ match VQ, and the capacity trend exists only at one proxy width |
+
+Neural results depend on the width of the training rate proxy (`rate_noise`).
+Numbers above are at 1.0, the width EXP-04/06/07 used; the audit measured
+0.2 and 0.5 as well. New neural experiments report the sweep, not a single width.
 
 ## References
 

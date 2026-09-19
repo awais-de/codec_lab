@@ -7,8 +7,7 @@ import numpy as np
 
 from codeclab.runctx import RunContext, load_config
 from codeclab import sources
-from codeclab.models import train_autoencoder, evaluate_sq_vs_vq
-from codeclab.models.fidelity import reconstruction_fidelity
+from codeclab.models import train_autoencoder, evaluate_sq_vs_vq, reconstruction_fidelity
 from codeclab.plotting import use_house_style
 
 HERE = Path(__file__).parent

@@ -30,12 +30,23 @@ Output → `results/exp_07_ring_highcap/results_<timestamp>/`: `results.json`,
 `ring_highcap_sq_vs_vq.png`.
 
 ## Definition of done
-- [ ] Ring-source run at high capacity using the existing harness
-- [ ] Both fairness conditions logged
-- [ ] Result compared against EXP-05 (3.29 dB) and EXP-06 (3.75 dB, PR 1.997)
-- [ ] One-paragraph interpretation, including whether participation ratio moved
-- [ ] Findings recorded for EXP-08
+- [x] Ring-source run at high capacity using the existing harness
+- [x] Both fairness conditions logged
+- [x] Result compared against EXP-05 (3.29 dB) and EXP-06 (3.75 dB, PR 1.997)
+- [x] One-paragraph interpretation, including whether participation ratio moved
+- [x] Findings recorded for EXP-08
 
 ## Result
-_(fill in after the run: did gain drop, did participation ratio move away from 2.0,
-does the latent scatter show the ring visibly unrolled)_
+Run `results_20260916090854`. Latent gain **+4.781 dB** (SQ 13.101, VQ 17.882),
+signal gain +2.416 dB, participation ratio 1.833. Gain went *up* with capacity
+rather than down, and the latent scatter shows the ring stretched into an
+ellipse, not unrolled. Cross-architecture check (h=64 and 2×64, tanh and ReLU,
+3 seeds each — 12 runs): nothing approached the floor.
+
+**Partly superseded — see the correction on issue #6.** The ring-claim audit
+showed the rise is a `rate_noise = 1.0` artifact: at widths 0.2/0.5 both h=4 and
+h=64 give 3.1–3.4 dB with the ring untouched (#16), and a network warm-started at
+a folded latent is driven back to this same ellipse by the width-1.0 objective
+(#18). A seamless fold under which SQ matches VQ does exist (#17), so the ring
+limits unrolling, not SQ. What survives: from random init, no capacity tested
+reduces the gap below the classical 3.29 dB.

@@ -9,8 +9,7 @@ docs/
 *.egg-info/
 __pycache__/
 
-# result run directories: keep the numbers (csv/json/yaml), not the binaries
-#results/**/*.png
+# result run directories: keep the numbers (csv/json/yaml) and the plots
 results/**/*.pdf
 results/**/*.npy
 results/**/*.npz

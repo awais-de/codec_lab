@@ -1,5 +1,5 @@
 experiment: smoke_gaussian_neural
-issue: null         # NOT a numbered experiment -- see docs/design/neural-capacity-plan.md, Phase A
+issue: 12
 
 source:
   kind: gaussian_2d

@@ -1,8 +1,11 @@
-# Smoke test: neural harness validation
+# EXP-04: Neural harness validation (Gaussian smoke test)
 
-**Not a numbered experiment.** Full reasoning: `docs/design/neural-capacity-plan.md`
-(Phase A), which is not committed to git (local design doc) -- this README is the
-committed summary of what the script does and why.
+Tracks **[#12](https://github.com/awais-de/codec_lab/issues/12)** · Stage: Reference
+
+Formalised as EXP-04 after it ran; the folder and its results path keep the
+original `smoke_gaussian_neural` name. Full reasoning:
+`docs/design/neural-capacity-plan.md` (Phase A), a local design doc not committed
+to git -- this README is the committed summary of what the script does and why.
 
 ## What it checks
 

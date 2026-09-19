@@ -53,12 +53,17 @@ Output → `results/exp_01_memoryless_floor/results_<timestamp>/`:
 `config.snapshot.yaml`, `meta.json`.
 
 ## Definition of done
-- [ ] `run.py` sweep implemented
-- [ ] plots + `metrics.csv` + `decomposition.csv` generated and committed
-- [ ] one-paragraph interpretation added below
-- [ ] space-filling and shape numbers recorded for EXP-02 to build on
+- [x] `run.py` sweep implemented
+- [x] plots + `metrics.csv` + `decomposition.csv` generated and committed
+- [x] one-paragraph interpretation added below
+- [x] space-filling and shape numbers recorded for EXP-02 to build on
 
 ## Result
-_(fill in after the run: the floor value and its split into space-filling vs
-shape, whether the uniform gain tracks 0.167 dB, whether SQ matches the closed
-forms)_
+Run `results_20260908155524`. Floor at R=2 bits/dim = **0.394 dB**, split
+0.018 space-filling + 0.376 shape. Space-filling rises 0.018 / 0.049 / 0.197
+across R = 2/3/4, crossing the 0.167 dB hexagonal prediction at R=4 — approached
+from below, since the square support boundary dilutes the interior hexagonal
+packing. Shape gain 0.376 / 0.697 / 1.072, still climbing; its high-rate
+asymptote needs R ≈ 6–8. Sanity checks pass: uniform SQ matches `6.02·R` exactly,
+Gaussian SQ runs ~0.1 dB under the Lloyd–Max table (not fully converged at 20k
+samples). Full table and interpretation on issue #11.

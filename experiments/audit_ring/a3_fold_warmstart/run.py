@@ -10,8 +10,8 @@ import torch
 from codeclab.runctx import RunContext, load_config
 from codeclab import sources
 from codeclab.folds import fold_ring
-from codeclab.models import AutoEncoder, evaluate_sq_vs_vq
-from codeclab.models.warmstart import fit_to_map, continue_training, marginal_modes
+from codeclab.models import (AutoEncoder, evaluate_sq_vs_vq, fit_to_map,
+                             continue_training, marginal_modes)
 from codeclab.plotting import use_house_style
 
 HERE = Path(__file__).parent

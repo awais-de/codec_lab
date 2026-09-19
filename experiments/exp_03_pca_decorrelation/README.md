@@ -49,10 +49,16 @@ Output → `results/exp_03_pca_decorrelation/results_<timestamp>/`:
 ## Definition of done
 - [x] `codeclab/transforms.py` (pca/klt) + `rd.water_filling_bits`
 - [x] `run.py` implemented
-- [ ] plots + `metrics.csv` generated and committed
-- [ ] one-paragraph interpretation added below
-- [ ] residual-after-PCA VQ gain recorded for EXP-06
+- [x] plots + `metrics.csv` generated and committed
+- [x] one-paragraph interpretation added below
+- [x] residual-after-PCA VQ gain recorded for EXP-06
 
 ## Result
-_(fill in after the run: does gain(PCA) collapse to the floor, where does it peel
-off from gain(plain), does SQ+PCA reach VQ-no-transform)_
+Run `results_20260908170525`. PCA + bit allocation collapses the VQ gain at
+ρ=0.85 from **3.38 dB to 0.30 dB** — the EXP-01 floor. Rotation alone does
+nothing: `SQ, PCA + equal bits` sits on `SQ, no transform` within 0.04 dB at
+every ρ, confirming Lloyd–Max distortion is linear in variance. The greedy
+allocation flips (2,2) → (3,1) at ρ=0.55, matching `Δb = ½·log₂((1+ρ)/(1−ρ))`,
+and `gain(PCA)` only peels away from `gain(plain)` once it does. The creep-back
+at ρ ≥ 0.9 (0.63, 1.32 dB) is integer-allocation granularity, not physics.
+Full table and interpretation on issue #3.

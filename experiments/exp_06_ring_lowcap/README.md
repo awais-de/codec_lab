@@ -28,12 +28,20 @@ Output → `results/exp_06_ring_lowcap/results_<timestamp>/`: `results.json`,
 `ring_lowcap_sq_vs_vq.png` (signal-space and latent-space reconstructions, SQ vs VQ).
 
 ## Definition of done
-- [ ] Ring-source run using the existing harness
-- [ ] Both fairness conditions logged
-- [ ] Result compared against EXP-05's 3.29 dB ceiling
-- [ ] One-paragraph interpretation
-- [ ] Latent statistics recorded for EXP-08
+- [x] Ring-source run using the existing harness
+- [x] Both fairness conditions logged
+- [x] Result compared against EXP-05's 3.29 dB ceiling
+- [x] One-paragraph interpretation
+- [x] Latent statistics recorded for EXP-08
 
 ## Result
-_(fill in after the run: does gain stay near 3.29 dB, does the latent scatter show
-the ring reshaped at all, is off-diagonal energy still ~0)_
+Run `results_20260916085107`. Latent gain **+3.749 dB** (SQ 13.503, VQ 17.252),
+signal gain +2.011 dB, participation ratio 1.997, off-diagonal energy 7.8e-5.
+The latent is still a ring — the encoder reshaped nothing — and the gain sits
+just above EXP-05's classical 3.29 dB rather than collapsing toward the floor.
+A small network cannot unroll the ring, as predicted.
+
+Recorded at `rate_noise = 1.0`. AUDIT-01 (#16) later established that this
+setting matters: at widths 0.2 and 0.5 the same configuration gives 3.33–3.38 dB
+across 3 seeds. The conclusion — no collapse toward the floor — holds at every
+width tested. Full write-up on issue #5.
