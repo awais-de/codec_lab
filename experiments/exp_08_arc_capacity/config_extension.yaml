@@ -1,0 +1,33 @@
+experiment: exp_08_arc_capacity
+issue: 7
+
+# Extension of the main grid: does the α=200° descent continue past h=64, or
+# does it flatten? h=64 is repeated as a consistency check against the main run.
+
+source:
+  kind: arc_2d
+  radius: 1.0
+  radial_noise: 0.1
+  n_samples: 20000
+  seed: 0
+  normalize_total_variance: true
+
+sweep:
+  angle_deg: [200]
+  capacity: [64, 128, 256]
+  rate_noise: [0.2, 0.5]           # the two widths where the descent appeared
+  seed: [0, 1, 2]
+
+quant:
+  bits_per_dim: 2
+
+train:
+  epochs: 2000
+  lr: 0.01
+
+threshold:
+  tolerance_db: 0.5
+
+runtime:
+  workers: null
+  threads_per_worker: 2

@@ -1,0 +1,2372 @@
+{
+  "reference_exp05b": {
+    "plain": {
+      "60": 1.955,
+      "200": 3.954,
+      "340": 3.421
+    },
+    "ceiling": {
+      "60": 0.26,
+      "200": 0.004,
+      "340": 0.003
+    }
+  },
+  "rows": [
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.7916147541598679,
+      "gain_signal_db": 0.9821574688530585,
+      "sqnr_sq_latent_db": 11.040347233160826,
+      "sqnr_vq_latent_db": 11.831961987320694,
+      "participation_ratio": 1.6240473827564976,
+      "off_diag_energy": 0.03666000613971197,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.724415736044417,
+      "gain_signal_db": 0.9687841266188819,
+      "sqnr_sq_latent_db": 11.230131602005109,
+      "sqnr_vq_latent_db": 11.954547338049526,
+      "participation_ratio": 1.6289841516101065,
+      "off_diag_energy": 0.02807680702813951,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 1.023208864837624,
+      "gain_signal_db": 1.2724149069633057,
+      "sqnr_sq_latent_db": 10.69089825696723,
+      "sqnr_vq_latent_db": 11.714107121804854,
+      "participation_ratio": 1.627151607239285,
+      "off_diag_energy": 0.056829766144949626,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.8105412849664742,
+      "gain_signal_db": 0.9801008277134144,
+      "sqnr_sq_latent_db": 11.077719928976467,
+      "sqnr_vq_latent_db": 11.888261213942942,
+      "participation_ratio": 1.6046939275461671,
+      "off_diag_energy": 0.03886188454746879,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.7517717717736563,
+      "gain_signal_db": 0.9730149885617756,
+      "sqnr_sq_latent_db": 11.275984444009929,
+      "sqnr_vq_latent_db": 12.027756215783585,
+      "participation_ratio": 1.6039502966982528,
+      "off_diag_energy": 0.031007808347566237,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 1.057035316738201,
+      "gain_signal_db": 1.2520177171410438,
+      "sqnr_sq_latent_db": 10.722806832913172,
+      "sqnr_vq_latent_db": 11.779842149651373,
+      "participation_ratio": 1.6035063986392701,
+      "off_diag_energy": 0.06136368459979813,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.9908711104425993,
+      "gain_signal_db": 1.0556713410895497,
+      "sqnr_sq_latent_db": 11.229802466439185,
+      "sqnr_vq_latent_db": 12.220673576881785,
+      "participation_ratio": 1.528212870375553,
+      "off_diag_energy": 0.04796092047868863,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.9330574778280774,
+      "gain_signal_db": 1.0425830414703192,
+      "sqnr_sq_latent_db": 11.412015124675607,
+      "sqnr_vq_latent_db": 12.345072602503684,
+      "participation_ratio": 1.527157864326139,
+      "off_diag_energy": 0.038236754633942764,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 1.0424503899183986,
+      "gain_signal_db": 1.0117482334572436,
+      "sqnr_sq_latent_db": 10.826235609972947,
+      "sqnr_vq_latent_db": 11.868685999891346,
+      "participation_ratio": 1.5300385925387212,
+      "off_diag_energy": 0.07671270261711846,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.996711455604272,
+      "gain_signal_db": 1.0880325424396418,
+      "sqnr_sq_latent_db": 12.509674208370408,
+      "sqnr_vq_latent_db": 13.50638566397468,
+      "participation_ratio": 1.6122418114460524,
+      "off_diag_energy": 0.05954754348789807,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 1.0126026716044407,
+      "gain_signal_db": 1.1696541262633904,
+      "sqnr_sq_latent_db": 11.389849182179235,
+      "sqnr_vq_latent_db": 12.402451853783676,
+      "participation_ratio": 1.621420530135352,
+      "off_diag_energy": 0.053300192264099766,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.9284808304011403,
+      "gain_signal_db": 1.208869850831464,
+      "sqnr_sq_latent_db": 13.446069865035618,
+      "sqnr_vq_latent_db": 14.374550695436758,
+      "participation_ratio": 1.6244575225481055,
+      "off_diag_energy": 0.03872497121205195,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.9933730257778439,
+      "gain_signal_db": 1.0281227050086237,
+      "sqnr_sq_latent_db": 12.03744055674263,
+      "sqnr_vq_latent_db": 13.030813582520475,
+      "participation_ratio": 1.6117172913252784,
+      "off_diag_energy": 0.05729590909579346,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.9931435022831394,
+      "gain_signal_db": 1.1532811097715054,
+      "sqnr_sq_latent_db": 11.149001181239104,
+      "sqnr_vq_latent_db": 12.142144683522243,
+      "participation_ratio": 1.620228301124272,
+      "off_diag_energy": 0.04853710604564543,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.7498926367633381,
+      "gain_signal_db": 0.9585124392338535,
+      "sqnr_sq_latent_db": 17.3163318988303,
+      "sqnr_vq_latent_db": 18.066224535593637,
+      "participation_ratio": 1.6156759456088694,
+      "off_diag_energy": 0.028214529377024032,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.9256860883231557,
+      "gain_signal_db": 0.8051528743207186,
+      "sqnr_sq_latent_db": 10.80722027366612,
+      "sqnr_vq_latent_db": 11.732906361989276,
+      "participation_ratio": 1.5552288147502236,
+      "off_diag_energy": 0.04591755480930791,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.9338808310136404,
+      "gain_signal_db": 0.9218215402186409,
+      "sqnr_sq_latent_db": 11.222999835475386,
+      "sqnr_vq_latent_db": 12.156880666489027,
+      "participation_ratio": 1.5568744471996039,
+      "off_diag_energy": 0.03977257994571409,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.7621718995043558,
+      "gain_signal_db": 1.069423223040463,
+      "sqnr_sq_latent_db": 17.2065967866159,
+      "sqnr_vq_latent_db": 17.968768686120256,
+      "participation_ratio": 1.5524637604872025,
+      "off_diag_energy": 0.006250244584707302,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.6037223564150143,
+      "gain_signal_db": 1.1685709193214233,
+      "sqnr_sq_latent_db": 12.09139588070814,
+      "sqnr_vq_latent_db": 12.695118237123154,
+      "participation_ratio": 1.63924723474012,
+      "off_diag_energy": 0.009546915443991486,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.9302075975108259,
+      "gain_signal_db": 1.137546895887656,
+      "sqnr_sq_latent_db": 12.019397043046096,
+      "sqnr_vq_latent_db": 12.949604640556922,
+      "participation_ratio": 1.636342811315698,
+      "off_diag_energy": 0.05463388061063437,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.7620914582670437,
+      "gain_signal_db": 1.2723882937446511,
+      "sqnr_sq_latent_db": 10.952091418452447,
+      "sqnr_vq_latent_db": 11.71418287671949,
+      "participation_ratio": 1.637366136990807,
+      "off_diag_energy": 0.023068834181408603,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.7228947808214965,
+      "gain_signal_db": 1.1330835739564513,
+      "sqnr_sq_latent_db": 12.290654149844011,
+      "sqnr_vq_latent_db": 13.013548930665507,
+      "participation_ratio": 1.6258541725604914,
+      "off_diag_energy": 0.015755812843378268,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.8211429563535297,
+      "gain_signal_db": 0.8373852845892529,
+      "sqnr_sq_latent_db": 12.082792405052505,
+      "sqnr_vq_latent_db": 12.903935361406035,
+      "participation_ratio": 1.6323911959780644,
+      "off_diag_energy": 0.05323585648484644,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.814706765067891,
+      "gain_signal_db": 1.2545697363109536,
+      "sqnr_sq_latent_db": 11.277387234268483,
+      "sqnr_vq_latent_db": 12.092093999336374,
+      "participation_ratio": 1.6330430854140188,
+      "off_diag_energy": 0.01913654013272002,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.9580790593583792,
+      "gain_signal_db": 0.9544526974241716,
+      "sqnr_sq_latent_db": 12.608083988600288,
+      "sqnr_vq_latent_db": 13.566163047958668,
+      "participation_ratio": 1.602887401915188,
+      "off_diag_energy": 0.01728487466900141,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.9700119674698175,
+      "gain_signal_db": 0.6871823906518895,
+      "sqnr_sq_latent_db": 12.192755804267074,
+      "sqnr_vq_latent_db": 13.162767771736892,
+      "participation_ratio": 1.593357819515703,
+      "off_diag_energy": 0.05975850553457027,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.9625619287069718,
+      "gain_signal_db": 0.8754624997085578,
+      "sqnr_sq_latent_db": 12.104945461524924,
+      "sqnr_vq_latent_db": 13.067507390231896,
+      "participation_ratio": 1.6026058201338107,
+      "off_diag_energy": 0.025339900359268766,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.9188070449270622,
+      "gain_signal_db": 1.1018978310431837,
+      "sqnr_sq_latent_db": 10.495592035594365,
+      "sqnr_vq_latent_db": 11.414399080521427,
+      "participation_ratio": 1.6407223489728142,
+      "off_diag_energy": 0.04650476941019192,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.5016016601299818,
+      "gain_signal_db": 1.1542465630345013,
+      "sqnr_sq_latent_db": 11.074675336734865,
+      "sqnr_vq_latent_db": 11.576276996864847,
+      "participation_ratio": 1.6357493897740059,
+      "off_diag_energy": 1.7783889474455523e-06,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.6214387707210172,
+      "gain_signal_db": 1.3349045119344236,
+      "sqnr_sq_latent_db": 10.936845610607964,
+      "sqnr_vq_latent_db": 11.558284381328981,
+      "participation_ratio": 1.634613243811495,
+      "off_diag_energy": 0.0008058672866803209,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 0.9206010117877899,
+      "gain_signal_db": 1.0063202666634776,
+      "sqnr_sq_latent_db": 10.566118785196146,
+      "sqnr_vq_latent_db": 11.486719796983936,
+      "participation_ratio": 1.6241215446417667,
+      "off_diag_energy": 0.050275941673474545,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 0.7080871282598409,
+      "gain_signal_db": 1.292529755183935,
+      "sqnr_sq_latent_db": 10.661386755988474,
+      "sqnr_vq_latent_db": 11.369473884248315,
+      "participation_ratio": 1.6372622934204513,
+      "off_diag_energy": 0.0005002405982698916,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 0.7443369500479484,
+      "gain_signal_db": 1.2989416459439713,
+      "sqnr_sq_latent_db": 10.645913387662473,
+      "sqnr_vq_latent_db": 11.390250337710421,
+      "participation_ratio": 1.6397526362319137,
+      "off_diag_energy": 5.161936640105105e-07,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 1.1145320432199775,
+      "gain_signal_db": 0.5918560855693826,
+      "sqnr_sq_latent_db": 10.88723107155073,
+      "sqnr_vq_latent_db": 12.001763114770707,
+      "participation_ratio": 1.6528991098719945,
+      "off_diag_energy": 0.04888547197286648,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 1.2794403278647835,
+      "gain_signal_db": 0.7097158165353559,
+      "sqnr_sq_latent_db": 11.07784867797595,
+      "sqnr_vq_latent_db": 12.357289005840734,
+      "participation_ratio": 1.7378963683769353,
+      "off_diag_energy": 0.0008811348305005095,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 1.0764085595086428,
+      "gain_signal_db": 0.7638507725818826,
+      "sqnr_sq_latent_db": 11.033604024169072,
+      "sqnr_vq_latent_db": 12.110012583677715,
+      "participation_ratio": 1.654140808183307,
+      "off_diag_energy": 0.0008151533848345516,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.4745418624839832,
+      "gain_signal_db": 3.5690554845422646,
+      "sqnr_sq_latent_db": 13.100562174437078,
+      "sqnr_vq_latent_db": 16.57510403692106,
+      "participation_ratio": 1.7985510759965426,
+      "off_diag_energy": 0.0026747100230237637,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.825089784064442,
+      "gain_signal_db": 3.723333540463649,
+      "sqnr_sq_latent_db": 13.53922401178744,
+      "sqnr_vq_latent_db": 17.36431379585188,
+      "participation_ratio": 1.7937220327321204,
+      "off_diag_energy": 0.01885501521250346,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 4.0747490511911,
+      "gain_signal_db": 3.9961349058967492,
+      "sqnr_sq_latent_db": 12.278458386064203,
+      "sqnr_vq_latent_db": 16.353207437255303,
+      "participation_ratio": 1.797400926118625,
+      "off_diag_energy": 0.02544733919662813,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.492402308811231,
+      "gain_signal_db": 3.437359988971812,
+      "sqnr_sq_latent_db": 13.134779704125778,
+      "sqnr_vq_latent_db": 16.62718201293701,
+      "participation_ratio": 1.7855231588964111,
+      "off_diag_energy": 0.0027281580883460077,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.8340187512728434,
+      "gain_signal_db": 3.584665373711845,
+      "sqnr_sq_latent_db": 13.579943199513856,
+      "sqnr_vq_latent_db": 17.4139619507867,
+      "participation_ratio": 1.7843690185715282,
+      "off_diag_energy": 0.019349901832824836,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 4.075407818806184,
+      "gain_signal_db": 3.8165403602750168,
+      "sqnr_sq_latent_db": 12.295549464938816,
+      "sqnr_vq_latent_db": 16.370957283745,
+      "participation_ratio": 1.7872612808387978,
+      "off_diag_energy": 0.02688217837836745,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.508817922628019,
+      "gain_signal_db": 2.306984218391502,
+      "sqnr_sq_latent_db": 13.257582798066405,
+      "sqnr_vq_latent_db": 16.766400720694424,
+      "participation_ratio": 1.738575273766798,
+      "off_diag_energy": 0.003347589412413926,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.903303646269862,
+      "gain_signal_db": 2.439271609086312,
+      "sqnr_sq_latent_db": 13.705440516353168,
+      "sqnr_vq_latent_db": 17.60874416262303,
+      "participation_ratio": 1.7371020523631135,
+      "off_diag_energy": 0.026205056305801024,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 4.037621464382475,
+      "gain_signal_db": 2.4746395228128524,
+      "sqnr_sq_latent_db": 12.404846959624326,
+      "sqnr_vq_latent_db": 16.4424684240068,
+      "participation_ratio": 1.7412043732227034,
+      "off_diag_energy": 0.034299896957936025,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.6759419083844396,
+      "gain_signal_db": 3.453248304761086,
+      "sqnr_sq_latent_db": 12.516851335763446,
+      "sqnr_vq_latent_db": 16.192793244147886,
+      "participation_ratio": 1.8276539654862831,
+      "off_diag_energy": 0.018744771038302088,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 2.7745580244308456,
+      "gain_signal_db": 2.618929857657129,
+      "sqnr_sq_latent_db": 13.244372284637631,
+      "sqnr_vq_latent_db": 16.018930309068477,
+      "participation_ratio": 1.7834079342739435,
+      "off_diag_energy": 6.56838185305902e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.485429185016109,
+      "gain_signal_db": 3.03578508020081,
+      "sqnr_sq_latent_db": 17.971097395812055,
+      "sqnr_vq_latent_db": 21.456526580828164,
+      "participation_ratio": 1.8220901895448232,
+      "off_diag_energy": 0.00025796066256032985,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.701689882545338,
+      "gain_signal_db": 2.715038968844633,
+      "sqnr_sq_latent_db": 12.305694698956412,
+      "sqnr_vq_latent_db": 16.00738458150175,
+      "participation_ratio": 1.8631901963229238,
+      "off_diag_energy": 0.015531466083363511,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 2.8104350351824756,
+      "gain_signal_db": 2.03577957095022,
+      "sqnr_sq_latent_db": 13.180690900583933,
+      "sqnr_vq_latent_db": 15.991125935766409,
+      "participation_ratio": 1.8717980464801833,
+      "off_diag_energy": 0.0006273330709282208,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.235169159757163,
+      "gain_signal_db": 2.283070732623985,
+      "sqnr_sq_latent_db": 15.443287177622086,
+      "sqnr_vq_latent_db": 18.67845633737925,
+      "participation_ratio": 1.8509940544310937,
+      "off_diag_energy": 0.0025188555213419383,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.740504172462405,
+      "gain_signal_db": 1.4571434695887824,
+      "sqnr_sq_latent_db": 13.263321872926593,
+      "sqnr_vq_latent_db": 17.003826045388998,
+      "participation_ratio": 1.977533077345829,
+      "off_diag_energy": 0.00031754325681253336,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 5.349191479355888,
+      "gain_signal_db": 1.7024574898455924,
+      "sqnr_sq_latent_db": 13.55198166151703,
+      "sqnr_vq_latent_db": 18.901173140872917,
+      "participation_ratio": 1.9975592105628228,
+      "off_diag_energy": 0.00030199870095582956,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.7814570633482134,
+      "gain_signal_db": 2.1695987772850707,
+      "sqnr_sq_latent_db": 14.197204829666973,
+      "sqnr_vq_latent_db": 17.978661893015186,
+      "participation_ratio": 1.8785705619193298,
+      "off_diag_energy": 0.006708461117619881,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 2.5143580633195093,
+      "gain_signal_db": 2.6719133562511477,
+      "sqnr_sq_latent_db": 13.096671481826746,
+      "sqnr_vq_latent_db": 15.611029545146256,
+      "participation_ratio": 1.8645784710359083,
+      "off_diag_energy": 0.014055203501475877,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.3981998186501343,
+      "gain_signal_db": 3.0920718297583534,
+      "sqnr_sq_latent_db": 13.7410455090237,
+      "sqnr_vq_latent_db": 17.139245327673834,
+      "participation_ratio": 1.8578082793352462,
+      "off_diag_energy": 0.007847836745214653,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.3687988390825367,
+      "gain_signal_db": 3.2717583794379497,
+      "sqnr_sq_latent_db": 12.742270865430449,
+      "sqnr_vq_latent_db": 16.111069704512985,
+      "participation_ratio": 1.8348317908380531,
+      "off_diag_energy": 0.016403182170222963,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 2.3849809459432354,
+      "gain_signal_db": 1.8190513450114612,
+      "sqnr_sq_latent_db": 13.149541835247792,
+      "sqnr_vq_latent_db": 15.534522781191027,
+      "participation_ratio": 1.9953303548260084,
+      "off_diag_energy": 7.763293075196682e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 2.8342672361990644,
+      "gain_signal_db": 1.8288466339560276,
+      "sqnr_sq_latent_db": 13.449127702470122,
+      "sqnr_vq_latent_db": 16.283394938669186,
+      "participation_ratio": 1.9959747289663055,
+      "off_diag_energy": 0.00035848977040200963,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 2.534711045552182,
+      "gain_signal_db": 2.05773020614226,
+      "sqnr_sq_latent_db": 11.74623157915719,
+      "sqnr_vq_latent_db": 14.280942624709372,
+      "participation_ratio": 1.9924464412298755,
+      "off_diag_energy": 0.00045886728859893084,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 5.079644880658245,
+      "gain_signal_db": 1.9878654031652427,
+      "sqnr_sq_latent_db": 15.245180098010335,
+      "sqnr_vq_latent_db": 20.32482497866858,
+      "participation_ratio": 1.8622968149859354,
+      "off_diag_energy": 0.00017026910095539532,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 4.80729129049706,
+      "gain_signal_db": 1.884373555416845,
+      "sqnr_sq_latent_db": 14.934304645390524,
+      "sqnr_vq_latent_db": 19.741595935887585,
+      "participation_ratio": 1.897468066199703,
+      "off_diag_energy": 3.3465682574818235e-06,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 4.721477957341037,
+      "gain_signal_db": 2.046693662751185,
+      "sqnr_sq_latent_db": 14.068845640641133,
+      "sqnr_vq_latent_db": 18.79032359798217,
+      "participation_ratio": 1.8983561796947221,
+      "off_diag_energy": 6.954787426588938e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 2.681140269919476,
+      "gain_signal_db": 2.8113862332366857,
+      "sqnr_sq_latent_db": 11.875680938956465,
+      "sqnr_vq_latent_db": 14.556821208875942,
+      "participation_ratio": 1.9092793693879968,
+      "off_diag_energy": 0.01166174001774212,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 2.4397881577961833,
+      "gain_signal_db": 2.515950443855843,
+      "sqnr_sq_latent_db": 13.001027931259923,
+      "sqnr_vq_latent_db": 15.440816089056106,
+      "participation_ratio": 1.8888125866062597,
+      "off_diag_energy": 0.005698432729752487,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.11154146472318,
+      "gain_signal_db": 3.085814247177659,
+      "sqnr_sq_latent_db": 11.876831718064496,
+      "sqnr_vq_latent_db": 14.988373182787676,
+      "participation_ratio": 1.8492254968520818,
+      "off_diag_energy": 0.02005552593695156,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 2.1219710709400044,
+      "gain_signal_db": 1.5666103744302777,
+      "sqnr_sq_latent_db": 12.463653196451387,
+      "sqnr_vq_latent_db": 14.585624267391392,
+      "participation_ratio": 1.998204895525336,
+      "off_diag_energy": 0.00017414017566185324,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 1.792541742841557,
+      "gain_signal_db": 1.5160418732623064,
+      "sqnr_sq_latent_db": 13.474987833298094,
+      "sqnr_vq_latent_db": 15.267529576139651,
+      "participation_ratio": 1.9954581861197527,
+      "off_diag_energy": 0.00010111910951439781,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 2.283698326637312,
+      "gain_signal_db": 1.4588410405047085,
+      "sqnr_sq_latent_db": 11.76770912163141,
+      "sqnr_vq_latent_db": 14.051407448268723,
+      "participation_ratio": 1.9989282091073561,
+      "off_diag_energy": 6.868271282390086e-07,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 5.875899104111545,
+      "gain_signal_db": 2.0813582689038572,
+      "sqnr_sq_latent_db": 13.084248562228902,
+      "sqnr_vq_latent_db": 18.960147666340447,
+      "participation_ratio": 1.8214393506482107,
+      "off_diag_energy": 0.001480462791344144,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 5.038988417398556,
+      "gain_signal_db": 2.14103419680883,
+      "sqnr_sq_latent_db": 14.516858150630071,
+      "sqnr_vq_latent_db": 19.555846568028628,
+      "participation_ratio": 1.7991827902860495,
+      "off_diag_energy": 4.24252928661034e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 200,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 5.862998493257448,
+      "gain_signal_db": 2.2624196586677705,
+      "sqnr_sq_latent_db": 12.843339438686021,
+      "sqnr_vq_latent_db": 18.70633793194347,
+      "participation_ratio": 1.9048212200969357,
+      "off_diag_energy": 0.0017214026769864904,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.4512313878004797,
+      "gain_signal_db": 3.4473641957359877,
+      "sqnr_sq_latent_db": 13.448761769600662,
+      "sqnr_vq_latent_db": 16.89999315740114,
+      "participation_ratio": 1.998355905293074,
+      "off_diag_energy": 0.00018597085392757468,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.501707549177244,
+      "gain_signal_db": 3.4970275898692424,
+      "sqnr_sq_latent_db": 13.781561524486456,
+      "sqnr_vq_latent_db": 17.2832690736637,
+      "participation_ratio": 1.9993821188127059,
+      "off_diag_energy": 7.48158078898438e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.56438760695195,
+      "gain_signal_db": 3.555192071067111,
+      "sqnr_sq_latent_db": 13.232412813057966,
+      "sqnr_vq_latent_db": 16.796800420009916,
+      "participation_ratio": 1.9988411602166498,
+      "off_diag_energy": 0.00010046370258067839,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.4512804569062574,
+      "gain_signal_db": 3.2799915446271903,
+      "sqnr_sq_latent_db": 13.459521387048529,
+      "sqnr_vq_latent_db": 16.910801843954786,
+      "participation_ratio": 1.998280777832572,
+      "off_diag_energy": 0.00020386221750369734,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.4911062004242,
+      "gain_signal_db": 3.3235257417607897,
+      "sqnr_sq_latent_db": 13.817120493741603,
+      "sqnr_vq_latent_db": 17.308226694165803,
+      "participation_ratio": 1.9980209160171234,
+      "off_diag_energy": 0.0002399857913376058,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.5651275444368444,
+      "gain_signal_db": 3.3899295922548074,
+      "sqnr_sq_latent_db": 13.23680695100309,
+      "sqnr_vq_latent_db": 16.801934495439934,
+      "participation_ratio": 1.9984262330447844,
+      "off_diag_energy": 0.0001256918331691293,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.451586443234156,
+      "gain_signal_db": 2.077507480322412,
+      "sqnr_sq_latent_db": 13.504855224435438,
+      "sqnr_vq_latent_db": 16.956441667669594,
+      "participation_ratio": 1.9979010071464658,
+      "off_diag_energy": 0.0002476142535538046,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.4986102085689943,
+      "gain_signal_db": 2.119395901419278,
+      "sqnr_sq_latent_db": 13.89218624701456,
+      "sqnr_vq_latent_db": 17.390796455583555,
+      "participation_ratio": 1.9973137299259591,
+      "off_diag_energy": 0.0003209772277766962,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": null,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.569607806397231,
+      "gain_signal_db": 2.159020129920611,
+      "sqnr_sq_latent_db": 13.251001944816183,
+      "sqnr_vq_latent_db": 16.820609751213414,
+      "participation_ratio": 1.9980158483291517,
+      "off_diag_energy": 0.0001621249176250254,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.5690720394342623,
+      "gain_signal_db": 2.980295361031221,
+      "sqnr_sq_latent_db": 14.4706656146948,
+      "sqnr_vq_latent_db": 18.039737654129063,
+      "participation_ratio": 1.9987030685328226,
+      "off_diag_energy": 5.6742119810562425e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.6218089081855442,
+      "gain_signal_db": 3.0747434902858366,
+      "sqnr_sq_latent_db": 13.688757506166274,
+      "sqnr_vq_latent_db": 17.31056641435182,
+      "participation_ratio": 1.9984277997617963,
+      "off_diag_energy": 0.00011650226378613773,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.573234627493399,
+      "gain_signal_db": 2.9947478585569023,
+      "sqnr_sq_latent_db": 15.416731793053167,
+      "sqnr_vq_latent_db": 18.989966420546565,
+      "participation_ratio": 1.9980376676242653,
+      "off_diag_energy": 0.00024539620251168135,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.6175325452271867,
+      "gain_signal_db": 2.43237877859832,
+      "sqnr_sq_latent_db": 13.611079524683964,
+      "sqnr_vq_latent_db": 17.22861206991115,
+      "participation_ratio": 1.9953050921170936,
+      "off_diag_energy": 5.11609221570364e-06,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.590345491655931,
+      "gain_signal_db": 2.439274454636621,
+      "sqnr_sq_latent_db": 13.239758353889698,
+      "sqnr_vq_latent_db": 16.83010384554563,
+      "participation_ratio": 1.9984599908725333,
+      "off_diag_energy": 0.00014967820494226204,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.6117701285303276,
+      "gain_signal_db": 2.414282948003219,
+      "sqnr_sq_latent_db": 14.47974378426574,
+      "sqnr_vq_latent_db": 18.091513912796067,
+      "participation_ratio": 1.9966881030622832,
+      "off_diag_energy": 0.0004144793783268648,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.923723766083544,
+      "gain_signal_db": 2.0893783690096814,
+      "sqnr_sq_latent_db": 13.819177659557546,
+      "sqnr_vq_latent_db": 17.74290142564109,
+      "participation_ratio": 1.9989606661716908,
+      "off_diag_energy": 5.388406290170367e-06,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 4.694860651335016,
+      "gain_signal_db": 1.9125655303807179,
+      "sqnr_sq_latent_db": 13.459642171771591,
+      "sqnr_vq_latent_db": 18.154502823106608,
+      "participation_ratio": 1.9930439117167495,
+      "off_diag_energy": 1.845119563753157e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 4,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 4.930143780897751,
+      "gain_signal_db": 2.2053909915421404,
+      "sqnr_sq_latent_db": 14.634782257470292,
+      "sqnr_vq_latent_db": 19.564926038368043,
+      "participation_ratio": 1.9515119989933987,
+      "off_diag_energy": 0.00012316189252863758,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.5709283936481953,
+      "gain_signal_db": 3.1044358066186355,
+      "sqnr_sq_latent_db": 13.962086605566213,
+      "sqnr_vq_latent_db": 17.53301499921441,
+      "participation_ratio": 1.9977233288732417,
+      "off_diag_energy": 0.0001292226788912094,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.5383725378627027,
+      "gain_signal_db": 3.0339388175658772,
+      "sqnr_sq_latent_db": 14.9188715872979,
+      "sqnr_vq_latent_db": 18.457244125160603,
+      "participation_ratio": 1.9997137433578678,
+      "off_diag_energy": 3.005303989693881e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.472178013537361,
+      "gain_signal_db": 2.9637535641196155,
+      "sqnr_sq_latent_db": 14.108805598349472,
+      "sqnr_vq_latent_db": 17.580983611886833,
+      "participation_ratio": 1.9988970065962717,
+      "off_diag_energy": 2.8229807926342084e-06,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.5796041304238475,
+      "gain_signal_db": 2.4243191309371817,
+      "sqnr_sq_latent_db": 13.944599401953292,
+      "sqnr_vq_latent_db": 17.52420353237714,
+      "participation_ratio": 1.9995226108031277,
+      "off_diag_energy": 5.65363512014914e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.6234915557027794,
+      "gain_signal_db": 2.390335083405132,
+      "sqnr_sq_latent_db": 13.877598093532699,
+      "sqnr_vq_latent_db": 17.501089649235478,
+      "participation_ratio": 1.995757443936967,
+      "off_diag_energy": 2.2772456559422126e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.6075447587409606,
+      "gain_signal_db": 2.3700986344604082,
+      "sqnr_sq_latent_db": 13.557091684577031,
+      "sqnr_vq_latent_db": 17.164636443317992,
+      "participation_ratio": 1.9982026779700761,
+      "off_diag_energy": 0.00010332435454737182,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 4.52547591398025,
+      "gain_signal_db": 2.4149881005229386,
+      "sqnr_sq_latent_db": 14.038069587531561,
+      "sqnr_vq_latent_db": 18.56354550151181,
+      "participation_ratio": 1.8893551895907192,
+      "off_diag_energy": 0.00043606052497373245,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 4.868514558021369,
+      "gain_signal_db": 2.9237994757828414,
+      "sqnr_sq_latent_db": 13.84376595558586,
+      "sqnr_vq_latent_db": 18.71228051360723,
+      "participation_ratio": 1.8037149721698795,
+      "off_diag_energy": 5.6780844753152746e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 16,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 4.716822636715605,
+      "gain_signal_db": 2.8021695009781844,
+      "sqnr_sq_latent_db": 13.650805677380525,
+      "sqnr_vq_latent_db": 18.36762831409613,
+      "participation_ratio": 1.810412605659693,
+      "off_diag_energy": 7.522039042723343e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.4502476534425774,
+      "gain_signal_db": 3.113827907762392,
+      "sqnr_sq_latent_db": 12.895094828442431,
+      "sqnr_vq_latent_db": 16.34534248188501,
+      "participation_ratio": 1.9995660430639306,
+      "off_diag_energy": 4.8691883120540893e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.3112920255604195,
+      "gain_signal_db": 2.8325544982318966,
+      "sqnr_sq_latent_db": 13.867881035279815,
+      "sqnr_vq_latent_db": 17.179173060840235,
+      "participation_ratio": 1.9988234247795837,
+      "off_diag_energy": 1.2654018233168448e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 0.2,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.3798614169044363,
+      "gain_signal_db": 2.9595338950043537,
+      "sqnr_sq_latent_db": 13.284137367977806,
+      "sqnr_vq_latent_db": 16.663998784882242,
+      "participation_ratio": 1.9995808690001218,
+      "off_diag_energy": 1.6309587548049644e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 3.540142809467735,
+      "gain_signal_db": 2.4924381926812558,
+      "sqnr_sq_latent_db": 12.961840132688916,
+      "sqnr_vq_latent_db": 16.50198294215665,
+      "participation_ratio": 1.9995478419325325,
+      "off_diag_energy": 3.750268626603016e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 3.408204433183979,
+      "gain_signal_db": 2.4372013728874204,
+      "sqnr_sq_latent_db": 13.513948443438508,
+      "sqnr_vq_latent_db": 16.922152876622487,
+      "participation_ratio": 1.9983517897591832,
+      "off_diag_energy": 3.294565028331349e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 0.5,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 3.5927205327409233,
+      "gain_signal_db": 2.4678126152766,
+      "sqnr_sq_latent_db": 13.039869143263488,
+      "sqnr_vq_latent_db": 16.63258967600441,
+      "participation_ratio": 1.993949449034514,
+      "off_diag_energy": 0.0004047619002231799,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 0,
+      "source_seed": 0,
+      "gain_latent_db": 5.122013672085638,
+      "gain_signal_db": 2.8578563067569966,
+      "sqnr_sq_latent_db": 13.41183139539079,
+      "sqnr_vq_latent_db": 18.533845067476427,
+      "participation_ratio": 1.7484908500896286,
+      "off_diag_energy": 1.3656924631439222e-07,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 1,
+      "source_seed": 0,
+      "gain_latent_db": 5.169459280005034,
+      "gain_signal_db": 3.0091761719829417,
+      "sqnr_sq_latent_db": 13.342635470324,
+      "sqnr_vq_latent_db": 18.512094750329034,
+      "participation_ratio": 1.7289715093009768,
+      "off_diag_energy": 2.2306072668082648e-05,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    },
+    {
+      "angle_deg": 340,
+      "capacity": 64,
+      "rate_noise": 1.0,
+      "seed": 2,
+      "source_seed": 0,
+      "gain_latent_db": 5.173048343073104,
+      "gain_signal_db": 2.891511760363983,
+      "sqnr_sq_latent_db": 13.270172319753923,
+      "sqnr_vq_latent_db": 18.443220662827027,
+      "participation_ratio": 1.7524021368599716,
+      "off_diag_energy": 7.1793857383292e-06,
+      "bits_allocation": [
+        2,
+        2
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.2,
+      "capacity": "linear",
+      "median_gain_latent_db": 0.7916147541598679,
+      "min": 0.724415736044417,
+      "max": 1.023208864837624,
+      "seed_spread_db": 0.2987931287932071,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.2,
+      "capacity": "h=4",
+      "median_gain_latent_db": 0.996711455604272,
+      "min": 0.9284808304011403,
+      "max": 1.0126026716044407,
+      "seed_spread_db": 0.08412184120330046,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.2,
+      "capacity": "h=16",
+      "median_gain_latent_db": 0.7620914582670437,
+      "min": 0.6037223564150143,
+      "max": 0.9302075975108259,
+      "seed_spread_db": 0.3264852410958117,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.2,
+      "capacity": "h=64",
+      "median_gain_latent_db": 0.6214387707210172,
+      "min": 0.5016016601299818,
+      "max": 0.9188070449270622,
+      "seed_spread_db": 0.41720538479708047,
+      "inconclusive": true
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.5,
+      "capacity": "linear",
+      "median_gain_latent_db": 0.8105412849664742,
+      "min": 0.7517717717736563,
+      "max": 1.057035316738201,
+      "seed_spread_db": 0.30526354496454466,
+      "inconclusive": true
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.5,
+      "capacity": "h=4",
+      "median_gain_latent_db": 0.9931435022831394,
+      "min": 0.7498926367633381,
+      "max": 0.9933730257778439,
+      "seed_spread_db": 0.24348038901450586,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.5,
+      "capacity": "h=16",
+      "median_gain_latent_db": 0.814706765067891,
+      "min": 0.7228947808214965,
+      "max": 0.8211429563535297,
+      "seed_spread_db": 0.09824817553203324,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.5,
+      "capacity": "h=64",
+      "median_gain_latent_db": 0.7443369500479484,
+      "min": 0.7080871282598409,
+      "max": 0.9206010117877899,
+      "seed_spread_db": 0.21251388352794898,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 1.0,
+      "capacity": "linear",
+      "median_gain_latent_db": 0.9908711104425993,
+      "min": 0.9330574778280774,
+      "max": 1.0424503899183986,
+      "seed_spread_db": 0.1093929120903212,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 1.0,
+      "capacity": "h=4",
+      "median_gain_latent_db": 0.9256860883231557,
+      "min": 0.7621718995043558,
+      "max": 0.9338808310136404,
+      "seed_spread_db": 0.17170893150928457,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 1.0,
+      "capacity": "h=16",
+      "median_gain_latent_db": 0.9625619287069718,
+      "min": 0.9580790593583792,
+      "max": 0.9700119674698175,
+      "seed_spread_db": 0.011932908111438323,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 1.0,
+      "capacity": "h=64",
+      "median_gain_latent_db": 1.1145320432199775,
+      "min": 1.0764085595086428,
+      "max": 1.2794403278647835,
+      "seed_spread_db": 0.20303176835614067,
+      "inconclusive": true
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.2,
+      "capacity": "linear",
+      "median_gain_latent_db": 3.825089784064442,
+      "min": 3.4745418624839832,
+      "max": 4.0747490511911,
+      "seed_spread_db": 0.6002071887071168,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.2,
+      "capacity": "h=4",
+      "median_gain_latent_db": 3.485429185016109,
+      "min": 2.7745580244308456,
+      "max": 3.6759419083844396,
+      "seed_spread_db": 0.9013838839535939,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.2,
+      "capacity": "h=16",
+      "median_gain_latent_db": 3.3687988390825367,
+      "min": 2.5143580633195093,
+      "max": 3.3981998186501343,
+      "seed_spread_db": 0.883841755330625,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.2,
+      "capacity": "h=64",
+      "median_gain_latent_db": 2.681140269919476,
+      "min": 2.4397881577961833,
+      "max": 3.11154146472318,
+      "seed_spread_db": 0.6717533069269965,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.5,
+      "capacity": "linear",
+      "median_gain_latent_db": 3.8340187512728434,
+      "min": 3.492402308811231,
+      "max": 4.075407818806184,
+      "seed_spread_db": 0.5830055099949529,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.5,
+      "capacity": "h=4",
+      "median_gain_latent_db": 3.235169159757163,
+      "min": 2.8104350351824756,
+      "max": 3.701689882545338,
+      "seed_spread_db": 0.8912548473628625,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.5,
+      "capacity": "h=16",
+      "median_gain_latent_db": 2.534711045552182,
+      "min": 2.3849809459432354,
+      "max": 2.8342672361990644,
+      "seed_spread_db": 0.449286290255829,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.5,
+      "capacity": "h=64",
+      "median_gain_latent_db": 2.1219710709400044,
+      "min": 1.792541742841557,
+      "max": 2.283698326637312,
+      "seed_spread_db": 0.491156583795755,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 1.0,
+      "capacity": "linear",
+      "median_gain_latent_db": 3.903303646269862,
+      "min": 3.508817922628019,
+      "max": 4.037621464382475,
+      "seed_spread_db": 0.5288035417544563,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 1.0,
+      "capacity": "h=4",
+      "median_gain_latent_db": 3.7814570633482134,
+      "min": 3.740504172462405,
+      "max": 5.349191479355888,
+      "seed_spread_db": 1.6086873068934828,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 1.0,
+      "capacity": "h=16",
+      "median_gain_latent_db": 4.80729129049706,
+      "min": 4.721477957341037,
+      "max": 5.079644880658245,
+      "seed_spread_db": 0.35816692331720823,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 1.0,
+      "capacity": "h=64",
+      "median_gain_latent_db": 5.862998493257448,
+      "min": 5.038988417398556,
+      "max": 5.875899104111545,
+      "seed_spread_db": 0.8369106867129883,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.2,
+      "capacity": "linear",
+      "median_gain_latent_db": 3.501707549177244,
+      "min": 3.4512313878004797,
+      "max": 3.56438760695195,
+      "seed_spread_db": 0.11315621915147034,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.2,
+      "capacity": "h=4",
+      "median_gain_latent_db": 3.573234627493399,
+      "min": 3.5690720394342623,
+      "max": 3.6218089081855442,
+      "seed_spread_db": 0.05273686875128192,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.2,
+      "capacity": "h=16",
+      "median_gain_latent_db": 3.5383725378627027,
+      "min": 3.472178013537361,
+      "max": 3.5709283936481953,
+      "seed_spread_db": 0.09875038011083426,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.2,
+      "capacity": "h=64",
+      "median_gain_latent_db": 3.3798614169044363,
+      "min": 3.3112920255604195,
+      "max": 3.4502476534425774,
+      "seed_spread_db": 0.13895562788215798,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.5,
+      "capacity": "linear",
+      "median_gain_latent_db": 3.4911062004242,
+      "min": 3.4512804569062574,
+      "max": 3.5651275444368444,
+      "seed_spread_db": 0.11384708753058703,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.5,
+      "capacity": "h=4",
+      "median_gain_latent_db": 3.6117701285303276,
+      "min": 3.590345491655931,
+      "max": 3.6175325452271867,
+      "seed_spread_db": 0.027187053571255504,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.5,
+      "capacity": "h=16",
+      "median_gain_latent_db": 3.6075447587409606,
+      "min": 3.5796041304238475,
+      "max": 3.6234915557027794,
+      "seed_spread_db": 0.04388742527893186,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.5,
+      "capacity": "h=64",
+      "median_gain_latent_db": 3.540142809467735,
+      "min": 3.408204433183979,
+      "max": 3.5927205327409233,
+      "seed_spread_db": 0.18451609955694437,
+      "inconclusive": true
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 1.0,
+      "capacity": "linear",
+      "median_gain_latent_db": 3.4986102085689943,
+      "min": 3.451586443234156,
+      "max": 3.569607806397231,
+      "seed_spread_db": 0.11802136316307532,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 1.0,
+      "capacity": "h=4",
+      "median_gain_latent_db": 4.694860651335016,
+      "min": 3.923723766083544,
+      "max": 4.930143780897751,
+      "seed_spread_db": 1.006420014814207,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 1.0,
+      "capacity": "h=16",
+      "median_gain_latent_db": 4.716822636715605,
+      "min": 4.52547591398025,
+      "max": 4.868514558021369,
+      "seed_spread_db": 0.34303864404111906,
+      "inconclusive": false
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 1.0,
+      "capacity": "h=64",
+      "median_gain_latent_db": 5.169459280005034,
+      "min": 5.122013672085638,
+      "max": 5.173048343073104,
+      "seed_spread_db": 0.05103467098746606,
+      "inconclusive": false
+    }
+  ],
+  "thresholds": [
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.2,
+      "threshold": "h=64",
+      "medians": {
+        "linear": 0.7916147541598679,
+        "h=4": 0.996711455604272,
+        "h=16": 0.7620914582670437,
+        "h=64": 0.6214387707210172
+      }
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 0.5,
+      "threshold": "h=64",
+      "medians": {
+        "linear": 0.8105412849664742,
+        "h=4": 0.9931435022831394,
+        "h=16": 0.814706765067891,
+        "h=64": 0.7443369500479484
+      }
+    },
+    {
+      "angle_deg": 60,
+      "rate_noise": 1.0,
+      "threshold": "not reached <= 64",
+      "medians": {
+        "linear": 0.9908711104425993,
+        "h=4": 0.9256860883231557,
+        "h=16": 0.9625619287069718,
+        "h=64": 1.1145320432199775
+      }
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.2,
+      "threshold": "not reached <= 64",
+      "medians": {
+        "linear": 3.825089784064442,
+        "h=4": 3.485429185016109,
+        "h=16": 3.3687988390825367,
+        "h=64": 2.681140269919476
+      }
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 0.5,
+      "threshold": "not reached <= 64",
+      "medians": {
+        "linear": 3.8340187512728434,
+        "h=4": 3.235169159757163,
+        "h=16": 2.534711045552182,
+        "h=64": 2.1219710709400044
+      }
+    },
+    {
+      "angle_deg": 200,
+      "rate_noise": 1.0,
+      "threshold": "not reached <= 64",
+      "medians": {
+        "linear": 3.903303646269862,
+        "h=4": 3.7814570633482134,
+        "h=16": 4.80729129049706,
+        "h=64": 5.862998493257448
+      }
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.2,
+      "threshold": "not reached <= 64",
+      "medians": {
+        "linear": 3.501707549177244,
+        "h=4": 3.573234627493399,
+        "h=16": 3.5383725378627027,
+        "h=64": 3.3798614169044363
+      }
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 0.5,
+      "threshold": "not reached <= 64",
+      "medians": {
+        "linear": 3.4911062004242,
+        "h=4": 3.6117701285303276,
+        "h=16": 3.6075447587409606,
+        "h=64": 3.540142809467735
+      }
+    },
+    {
+      "angle_deg": 340,
+      "rate_noise": 1.0,
+      "threshold": "not reached <= 64",
+      "medians": {
+        "linear": 3.4986102085689943,
+        "h=4": 4.694860651335016,
+        "h=16": 4.716822636715605,
+        "h=64": 5.169459280005034
+      }
+    }
+  ],
+  "spot_check": {
+    "rows": [
+      {
+        "angle_deg": 200,
+        "capacity": 16,
+        "rate_noise": 0.5,
+        "seed": 0,
+        "source_seed": 0,
+        "gain_latent_db": 2.3849809459432354,
+        "gain_signal_db": 1.8190513450114612,
+        "sqnr_sq_latent_db": 13.149541835247792,
+        "sqnr_vq_latent_db": 15.534522781191027,
+        "participation_ratio": 1.9953303548260084,
+        "off_diag_energy": 7.763293075196682e-05,
+        "bits_allocation": [
+          2,
+          2
+        ]
+      },
+      {
+        "angle_deg": 200,
+        "capacity": 16,
+        "rate_noise": 0.5,
+        "seed": 0,
+        "source_seed": 1,
+        "gain_latent_db": 2.377828146412961,
+        "gain_signal_db": 1.8561438336872662,
+        "sqnr_sq_latent_db": 13.185705694216967,
+        "sqnr_vq_latent_db": 15.563533840629928,
+        "participation_ratio": 1.996071133882604,
+        "off_diag_energy": 8.107047262613335e-05,
+        "bits_allocation": [
+          2,
+          2
+        ]
+      },
+      {
+        "angle_deg": 200,
+        "capacity": 16,
+        "rate_noise": 0.5,
+        "seed": 0,
+        "source_seed": 2,
+        "gain_latent_db": 2.387024562952167,
+        "gain_signal_db": 1.8906970822032676,
+        "sqnr_sq_latent_db": 12.981441493744368,
+        "sqnr_vq_latent_db": 15.368466056696535,
+        "participation_ratio": 1.9971095802224268,
+        "off_diag_energy": 0.00010550918888400071,
+        "bits_allocation": [
+          2,
+          2
+        ]
+      }
+    ],
+    "source_seed_spread_db": 0.009196416539205998,
+    "init_seed_spread_db": 0.449286290255829
+  }
+}

@@ -1,0 +1,36 @@
+experiment: exp_08_arc_capacity
+issue: 7
+
+source:
+  kind: arc_2d
+  radius: 1.0
+  radial_noise: 0.1
+  n_samples: 20000
+  seed: 0
+  normalize_total_variance: true   # without this a fixed rate_noise is not comparable across angles
+
+sweep:
+  angle_deg: [60, 200, 340]
+  capacity: [null, 4, 16, 64]      # null = literal linear encoder
+  rate_noise: [0.2, 0.5, 1.0]      # 0.5 is rate-matched to K=16; 1.0 coarser, 0.2 finer
+  seed: [0, 1, 2]                  # init seeds; source seed fixed above
+
+quant:
+  bits_per_dim: 2
+
+train:
+  epochs: 2000
+  lr: 0.01
+
+threshold:
+  tolerance_db: 0.5                # cell counts as "SQ suffices" within this of the angle's ceiling
+
+spot_check:                        # source-seed control: does sampling variability matter next to init?
+  angle_deg: 200
+  capacity: 16
+  rate_noise: 0.5
+  source_seeds: [0, 1, 2]
+
+runtime:
+  workers: null                    # null = auto (cpu_count // 2)
+  threads_per_worker: 2
