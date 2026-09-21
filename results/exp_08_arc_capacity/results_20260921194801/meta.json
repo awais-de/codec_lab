@@ -1,0 +1,12 @@
+{
+  "experiment": "exp_08_arc_capacity",
+  "finished": "2026-09-21T21:02:00",
+  "duration_s": 4438.453,
+  "git_sha": "6ba0bd673f913d2507b7ae2b6d4201c464ddbf3e",
+  "git_dirty": true,
+  "seed": 0,
+  "host": "wlan-b0385.fem.tu-ilmenau.de",
+  "python": "3.12.2",
+  "n_cells": 18,
+  "workers": 4
+}
