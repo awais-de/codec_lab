@@ -1,10 +1,12 @@
-"""Hand-built ring encoders for the ring-claim audit: a polar seam (discontinuous) and a
-seamless fold along a Hamiltonian cycle of the 4x4 grid. Each comes with its inverse."""
+"""Hand-built encoders for the ring and arc families: a polar seam (discontinuous), a
+seamless fold along a Hamiltonian cycle of the 4x4 grid, and the ideal arc straightening.
+Each comes with its inverse."""
 from __future__ import annotations
 
 import numpy as np
 
-__all__ = ["GRID_CYCLE", "matched_perp_scale", "polar_seam", "unpolar", "fold_ring", "unfold_ring"]
+__all__ = ["GRID_CYCLE", "matched_perp_scale", "polar_seam", "unpolar", "fold_ring",
+           "unfold_ring", "straighten_arc", "unstraighten_arc"]
 
 GRID_CYCLE = np.array(
     [(0, 0), (0, 1), (0, 2), (0, 3), (1, 3), (1, 2), (1, 1), (2, 1),
@@ -66,3 +68,23 @@ def unfold_ring(Z: np.ndarray, *, radius: float = 1.0, perp_scale: float | None 
     theta = (k + fk) / n * 2 * np.pi
     r = radius + off / scale
     return np.stack([r * np.cos(theta), r * np.sin(theta)], axis=1)
+
+
+def _arc_mean(angle_deg: float, radius: float) -> np.ndarray:
+    a = np.deg2rad(angle_deg)
+    return radius * np.array([np.sin(a) / a, (1 - np.cos(a)) / a])
+
+
+def straighten_arc(X: np.ndarray, *, angle_deg: float, radius: float = 1.0) -> np.ndarray:
+    """Arc -> (arc length, radial deviation): the ideal encoder for an arc, exactly invertible."""
+    P = np.asarray(X, dtype=float) + _arc_mean(angle_deg, radius)
+    theta = np.arctan2(P[:, 1], P[:, 0]) % (2 * np.pi)
+    r = np.hypot(P[:, 0], P[:, 1])
+    return np.stack([theta * radius, r - radius], axis=1)
+
+
+def unstraighten_arc(Z: np.ndarray, *, angle_deg: float, radius: float = 1.0) -> np.ndarray:
+    """Exact inverse of :func:`straighten_arc`."""
+    Z = np.asarray(Z, dtype=float)
+    theta, r = Z[:, 0] / radius, radius + Z[:, 1]
+    return np.stack([r * np.cos(theta), r * np.sin(theta)], axis=1) - _arc_mean(angle_deg, radius)

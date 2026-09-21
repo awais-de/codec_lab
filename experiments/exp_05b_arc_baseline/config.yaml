@@ -1,0 +1,16 @@
+experiment: exp_05b_arc_baseline
+issue: 19
+
+source:
+  kind: arc_2d
+  radius: 1.0
+  radial_noise: 0.1
+  n_samples: 20000
+  seed: 0
+
+sweep:
+  angle_deg: [60, 200, 340, 360]
+
+quant:
+  bits_per_dim: 2
+  lbg_eps: 0.01

@@ -8,6 +8,8 @@ __all__ = [
     "uniform_2d",
     "correlated_gaussian",
     "ring_2d",
+    "arc_2d",
+    "arc_2d_covariance",
 ]
 
 
@@ -61,3 +63,32 @@ def ring_2d(n: int, *, radius: float = 1.0, radial_noise: float = 0.1, seed: int
     theta = rng.uniform(0.0, 2 * np.pi, size=n)
     r = radius + rng.normal(0.0, radial_noise, size=n)
     return np.stack([r * np.cos(theta), r * np.sin(theta)], axis=1)
+
+
+def arc_2d(n: int, angle_deg: float, *, radius: float = 1.0, radial_noise: float = 0.1,
+           seed: int = 0) -> np.ndarray:
+    """Points scattered near an arc of angular extent ``angle_deg``, centred on its
+    analytic mean. ``angle_deg=360`` is :func:`ring_2d` (same draw order, zero mean).
+    """
+    alpha = np.deg2rad(angle_deg)
+    if not 0 < alpha <= 2 * np.pi:
+        raise ValueError(f"angle_deg must be in (0, 360], got {angle_deg}")
+    rng = np.random.default_rng(seed)
+    theta = rng.uniform(0.0, alpha, size=n)
+    r = radius + rng.normal(0.0, radial_noise, size=n)
+    mean = radius * np.array([np.sin(alpha) / alpha, (1 - np.cos(alpha)) / alpha])
+    return np.stack([r * np.cos(theta), r * np.sin(theta)], axis=1) - mean
+
+
+def arc_2d_covariance(angle_deg: float, *, radius: float = 1.0,
+                      radial_noise: float = 0.1) -> np.ndarray:
+    """Closed-form covariance of :func:`arc_2d`; equals ``0.5*(radius**2+radial_noise**2)*I``
+    at ``angle_deg=360``.
+    """
+    a = np.deg2rad(angle_deg)
+    m2 = radius ** 2 + radial_noise ** 2
+    ex, ey = radius * np.sin(a) / a, radius * (1 - np.cos(a)) / a
+    vx = m2 * (0.5 + np.sin(2 * a) / (4 * a)) - ex ** 2
+    vy = m2 * (0.5 - np.sin(2 * a) / (4 * a)) - ey ** 2
+    cxy = m2 * (1 - np.cos(2 * a)) / (4 * a) - ex * ey
+    return np.array([[vx, cxy], [cxy, vy]])
